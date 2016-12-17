@@ -1,0 +1,315 @@
+<%@ page contentType="text/html; charset=EUC-KR" %>
+	<title>SINNARA - Responsive Website Template</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Web Fonts -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?amily=Roboto+Slab:400,300,700">
+	<!-- CSS Global Compulsory -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/blog.style.css">
+
+	<!-- CSS Header and Footer -->
+	<link rel="stylesheet" href="assets/css/headers/header-v8.css">
+	<link rel="stylesheet" href="assets/css/footers/footer-v8.css">
+
+	<!-- CSS Implementing Plugins -->
+	<link rel="stylesheet" href="assets/plugins/animate.css">
+	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+	<link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/plugins/login-signup-modal-window/css/style.css">
+	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
+	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/skins/default/style.css">
+
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
+	<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+
+	<!-- CSS Customization -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body class="header-fixed header-fixed-space-v2">
+<div class="wrapper">
+	<!--=== Header v8 ===-->
+	<div class="header-v8 header-sticky">
+		<!-- Topbar blog -->
+		<div class="blog-topbar">
+			<div class="topbar-search-block">
+				<div class="container">
+					<form action="">
+						<input type="text" class="form-control" placeholder="Search">
+						<div class="search-close"><i class="icon-close"></i></div>
+					</form>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8 col-xs-8">
+						<div class="topbar-time">since 160905</div>
+						<div class="topbar-toggler"><span class="fa fa-angle-down"></span></div>
+						<ul class="topbar-list topbar-menu">
+							<li><a href="#">SINNARA</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="https://www.instagram.com/buzzminkyunghoon/">최정민</a></li>
+                            <li><a href="https://youtu.be/zLN0aacAmQs">김진국</a></li>
+                            <li><a href="http://www.sarang.org ">김재환</a></li>
+                            <li><a href="http://cafe.daum.net/SoulDressercafe">정성혜</a></li>
+                            <li><a href="http://cafe.daum.net/sonhyunju">최재훈</a></li>
+                            <li><a href="http://cafe.daum.net/csws">이상훈</a></li>
+							<li>
+								<a href="javascript:void(0);">마이페이지</a>
+								<ul class="topbar-dropdown">
+									<li><a href="#">마이페이지</a></li>
+									<li><a href="#">쪽지보내기</a></li>
+									<li class="topbar-submenu">
+										<a href="javascript:void(0);">모으기</a>
+										<ul class="topbar-submenu-in">
+											<li><a href="#">딱지</a></li>
+											<li><a href="#">마나</a></li>
+											<li class="topbar-submenu">
+												<a href="javascript:void(0);">결제</a>
+												<ul class="topbar-submenu-in">
+													<li><a href="#">이용권</a></li>
+													<li><a href="#">아이템</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="cd-log_reg hidden-sm hidden-md hidden-lg"><strong><a class="cd-signin" href="javascript:void(0);">로그인</a></strong></li>
+							<li class="cd-log_reg hidden-sm hidden-md hidden-lg"><strong><a class="cd-signup" href="javascript:void(0);">회원가입</a></strong></li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-xs-4 clearfix">
+						<i class="fa fa-search search-btn pull-right"></i>
+						<ul class="topbar-list topbar-log_reg pull-right visible-sm-block visible-md-block visible-lg-block">
+							<li class="cd-log_reg home"><a class="cd-signin" href="javascript:void(0);">로그인</a></li>
+							<li class="cd-log_reg"><a class="cd-signup" href="javascript:void(0);">회원가입</a></li>
+						</ul>
+					</div>
+				</div><!--/end row-->
+			</div><!--/end container-->
+		</div>
+		<!-- End Topbar blog -->
+
+		<!-- Navbar -->
+		<div class="navbar mega-menu" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="res-container">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<div class="navbar-brand">
+						<a href="index.html">
+							<img src="assets/img/themes/logo-sinnara-default.png" alt="Logo">
+						</a>
+					</div>
+				</div><!--/end responsive container-->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-responsive-collapse">
+					<div class="res-container">
+						<ul class="nav navbar-nav">
+							
+                           	<!-- Main Demo -->
+							<li><a href="../main_piece.jsp">작품</a></li>
+							<!-- Main Demo -->
+                            
+                            <!-- Main Demo -->
+							<li><a href="../main_finishPiece.jsp">완결 작품</a></li>
+							<!-- Main Demo -->
+                                                        
+                            <!-- Main Demo -->
+							<li><a href="../main_best.jsp">베스트</a></li>
+							<!-- Main Demo -->
+                                                        
+                            <!-- Main Demo -->
+							<li><a href="../main_community.jsp">커뮤니티</a></li>
+							<!-- Main Demo -->
+                                                        
+                            <!-- Main Demo -->
+							<li><a href="../main_itemShop.jsp">아이템샵</a></li>
+							<!-- Main Demo -->
+                                                        
+                            <!-- Main Demo -->
+							<li><a href="../main_customerCenter.jsp">고객센터</a></li>
+							<!-- Main Demo -->
+                            
+                            <!-- Archives -->
+							<li class="dropdown mega-menu-fullwidth">
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+									+
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<div class="mega-menu-content">
+											<div class="container">
+												<div class="row">
+													<div class="col-md-3 md-margin-bottom-30">
+														<h2>작품</h2>
+														<ul class="dropdown-link-list">
+															<li><a href="#">연재작품</a></li>
+															<li><a href="#">웹툰</a></li>
+															<li><a href="#">작가 소개</a></li>
+															<li><a href="#">작품 서평</a></li>
+															<li><a href="#">작품 홍보</a></li>
+															<li><a href="#">작품 게시판</a></li>
+														</ul>
+													</div>
+													<div class="col-md-3 md-margin-bottom-30">
+														<h2>베스트</h2>
+														<ul class="dropdown-link-list">
+															<li><a href="#">투데이베스트</a></li>
+															<li><a href="#">주간베스트</a></li>
+															<li><a href="#">월간베스트</a></li>
+															<li><a href="#">Best of Best</a></li>
+														</ul>
+													</div>
+													<div class="col-md-3 md-margin-bottom-30">
+														<h2>커뮤니티</h2>
+														<ul class="dropdown-link-list">
+															<li><a href="#">자유게시판</a></li>
+															<li><a href="#">신나라 Talk! Talk!</a></li>
+															<li><a href="#">뜰</a></li>
+															<li><a href="#">커뮤니티</a></li>
+														</ul>
+													</div>
+                                                    <div class="col-md-3 md-margin-bottom-30">
+														<h2>아이템샵</h2>
+														<ul class="dropdown-link-list">
+															<li><a href="#">이용권구매</a></li>
+															<li><a href="#">딱지충전</a></li>
+															<li><a href="#">홍보아이템</a></li>
+															<li><a href="#">예약아이템</a></li>
+															<li><a href="#">후원쿠폰</a></li>
+														</ul>
+													</div>
+                                                    <div class="col-md-3 md-margin-bottom-30">
+														<h2>고객센터</h2>
+														<ul class="dropdown-link-list">
+															<li><a href="#">자주하는 질문</a></li>
+															<li><a href="#">1:1 문의</a></li>
+															<li><a href="#">공지사항</a></li>
+															<li><a href="#">이벤트</a></li>
+															<li><a href="#">광고/제휴문의</a></li>
+															<li><a href="#">저작권 보호센터</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<!-- End Archives -->
+                            
+                            <!-- Fashion -->
+							<li class="dropdown mega-menu-fullwidth">
+								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+									예정
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<div class="mega-menu-content">
+											<div class="container">
+												<div class="row">
+													<div class="col-md-3 md-margin-bottom-30">
+														<ul class="dropdown-link-list">
+															<li><a href="#">World</a></li>
+															<li><a href="#">Economy</a></li>
+															<li><a href="#">Sport</a></li>
+															<li><a href="#">Fashion</a></li>
+															<li><a href="#">Health</a></li>
+															<li><a href="#">Travel</a></li>
+															<li><a href="#">Lifestyle</a></li>
+															<li><a href="#">Hi-Tech</a></li>
+														</ul>
+													</div>
+													<div class="col-md-5 md-margin-bottom-30">
+														<!-- Blog Grid -->
+														<div class="blog-grid">
+															<img class="img-responsive" src="assets/img/blog/img9.jpg" alt="">
+															<h3 class="blog-grid-title-sm"><a href="blog_single.html">DB 조회수 가장 높은 거 올릴거임!</a></h3>
+														</div>
+														<!-- End Blog Grid -->
+													</div>
+													<div class="col-md-4">
+														<!-- Blog Thumb -->
+														<div class="blog-thumb margin-bottom-20">
+															<div class="blog-thumb-hover">
+																<img src="assets/img/blog/img16.jpg" alt="">
+																<a class="hover-grad" href="blog_single.html"><i class="fa fa-video-camera"></i></a>
+															</div>
+															<div class="blog-thumb-desc">
+																<h3><a href="blog_single.html">여러분과 함께 해서 영광입니다. ㅋㅋ</a></h3>
+																<ul class="blog-thumb-info">
+																	<li>Dec 10, 2016</li>
+																	<li><a href="blog_single.html"><i class="fa fa-comments"></i> 0</a></li>
+																</ul>
+															</div>
+														</div>
+														<!-- End Blog Thumb -->
+
+														<!-- Blog Thumb -->
+														<div class="blog-thumb margin-bottom-20">
+															<div class="blog-thumb-hover">
+																<img src="assets/img/blog/img15.jpg" alt="">
+																<a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+															</div>
+															<div class="blog-thumb-desc">
+																<h3><a href="blog_single.html">쓸 말이 없다.</a></h3>
+																<ul class="blog-thumb-info">
+																	<li>Mar 6, 2017</li>
+																	<li><a href="blog_single.html"><i class="fa fa-comments"></i> 0</a></li>
+																</ul>
+															</div>
+														</div>
+														<!-- End Blog Thumb -->
+
+														<!-- Blog Thumb -->
+														<div class="blog-thumb margin-bottom-30">
+															<div class="blog-thumb-hover">
+																<img src="assets/img/blog/img17.jpg" alt="">
+																<a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
+															</div>
+															<div class="blog-thumb-desc">
+																<h3><a href="blog_single.html">프론트는 성혜가 해줬으면 좋겠다. ㅠ_ㅠ</a></h3>
+																<ul class="blog-thumb-info">
+																	<li>May 5,  2016</li>
+																	<li><a href="blog_single.html"><i class="fa fa-comments"></i> 0</a></li>
+																</ul>
+															</div>
+														</div>
+														<!-- End Blog Thumb -->
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<!-- End Fashion -->
+						</ul>
+					</div><!--/responsive container-->
+				</div><!--/navbar-collapse-->
+			</div><!--/end contaoner-->
+		</div>
+		<!-- End Navbar -->
+	</div>
+	<!--=== End Header v8 ===-->

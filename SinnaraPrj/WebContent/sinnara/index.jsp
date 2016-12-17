@@ -4,320 +4,17 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<title>SINNARA - Responsive Website Template</title>
-
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- Web Fonts -->
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?amily=Roboto+Slab:400,300,700">
-	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/blog.style.css">
-
-	<!-- CSS Header and Footer -->
-	<link rel="stylesheet" href="assets/css/headers/header-v8.css">
-	<link rel="stylesheet" href="assets/css/footers/footer-v8.css">
-
-	<!-- CSS Implementing Plugins -->
-	<link rel="stylesheet" href="assets/plugins/animate.css">
-	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/login-signup-modal-window/css/style.css">
-	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
-	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/skins/default/style.css">
-
-	<!-- CSS Theme -->
-	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
-	<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
-
-	<!-- CSS Customization -->
-	<link rel="stylesheet" href="assets/css/custom.css">
-</head>
-
-<body class="header-fixed header-fixed-space-v2">
-<div class="wrapper">
-	<!--=== Header v8 ===-->
-	<div class="header-v8 header-sticky">
-		<!-- Topbar blog -->
-		<div class="blog-topbar">
-			<div class="topbar-search-block">
-				<div class="container">
-					<form action="">
-						<input type="text" class="form-control" placeholder="Search">
-						<div class="search-close"><i class="icon-close"></i></div>
-					</form>
-				</div>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 col-xs-8">
-						<div class="topbar-time">since 160905</div>
-						<div class="topbar-toggler"><span class="fa fa-angle-down"></span></div>
-						<ul class="topbar-list topbar-menu">
-							<li><a href="#">SINNARA</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="https://www.instagram.com/buzzminkyunghoon/">최정민</a></li>
-                            <li><a href="https://youtu.be/zLN0aacAmQs">김진국</a></li>
-                            <li><a href="http://www.sarang.org ">김재환</a></li>
-                            <li><a href="http://cafe.daum.net/SoulDressercafe">정성혜</a></li>
-                            <li><a href="http://cafe.daum.net/sonhyunju">최재훈</a></li>
-                            <li><a href="http://cafe.daum.net/csws">이상훈</a></li>
-							<li>
-								<a href="javascript:void(0);">마이페이지</a>
-								<ul class="topbar-dropdown">
-									<li><a href="#">마이페이지</a></li>
-									<li><a href="#">쪽지보내기</a></li>
-									<li class="topbar-submenu">
-										<a href="javascript:void(0);">모으기</a>
-										<ul class="topbar-submenu-in">
-											<li><a href="#">딱지</a></li>
-											<li><a href="#">마나</a></li>
-											<li class="topbar-submenu">
-												<a href="javascript:void(0);">결제</a>
-												<ul class="topbar-submenu-in">
-													<li><a href="#">이용권</a></li>
-													<li><a href="#">아이템</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li class="cd-log_reg hidden-sm hidden-md hidden-lg"><strong><a class="cd-signin" href="javascript:void(0);">로그인</a></strong></li>
-							<li class="cd-log_reg hidden-sm hidden-md hidden-lg"><strong><a class="cd-signup" href="javascript:void(0);">회원가입</a></strong></li>
-						</ul>
-					</div>
-					<div class="col-sm-4 col-xs-4 clearfix">
-						<i class="fa fa-search search-btn pull-right"></i>
-						<ul class="topbar-list topbar-log_reg pull-right visible-sm-block visible-md-block visible-lg-block">
-							<li class="cd-log_reg home"><a class="cd-signin" href="javascript:void(0);">로그인</a></li>
-							<li class="cd-log_reg"><a class="cd-signup" href="javascript:void(0);">회원가입</a></li>
-						</ul>
-					</div>
-				</div><!--/end row-->
-			</div><!--/end container-->
-		</div>
-		<!-- End Topbar blog -->
-
-		<!-- Navbar -->
-		<div class="navbar mega-menu" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="res-container">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-
-					<div class="navbar-brand">
-						<a href="index.html">
-							<img src="assets/img/themes/logo-sinnara-default.png" alt="Logo">
-						</a>
-					</div>
-				</div><!--/end responsive container-->
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-responsive-collapse">
-					<div class="res-container">
-						<ul class="nav navbar-nav">
-							
-                           	<!-- Main Demo -->
-							<li><a href="../main_piece.jsp">작품</a></li>
-							<!-- Main Demo -->
-                            
-                            <!-- Main Demo -->
-							<li><a href="../main_finishPiece.jsp">완결 작품</a></li>
-							<!-- Main Demo -->
-                                                        
-                            <!-- Main Demo -->
-							<li><a href="../main_best.jsp">베스트</a></li>
-							<!-- Main Demo -->
-                                                        
-                            <!-- Main Demo -->
-							<li><a href="../main_community.jsp">커뮤니티</a></li>
-							<!-- Main Demo -->
-                                                        
-                            <!-- Main Demo -->
-							<li><a href="../main_itemShop.jsp">아이템샵</a></li>
-							<!-- Main Demo -->
-                                                        
-                            <!-- Main Demo -->
-							<li><a href="../main_customerCenter.jsp">고객센터</a></li>
-							<!-- Main Demo -->
-                            
-                            <!-- Archives -->
-							<li class="dropdown mega-menu-fullwidth">
-								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-									+
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<div class="mega-menu-content">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-3 md-margin-bottom-30">
-														<h2>작품</h2>
-														<ul class="dropdown-link-list">
-															<li><a href="#">연재작품</a></li>
-															<li><a href="#">웹툰</a></li>
-															<li><a href="#">작가 소개</a></li>
-															<li><a href="#">작품 서평</a></li>
-															<li><a href="#">작품 홍보</a></li>
-															<li><a href="#">작품 게시판</a></li>
-														</ul>
-													</div>
-													<div class="col-md-3 md-margin-bottom-30">
-														<h2>베스트</h2>
-														<ul class="dropdown-link-list">
-															<li><a href="#">투데이베스트</a></li>
-															<li><a href="#">주간베스트</a></li>
-															<li><a href="#">월간베스트</a></li>
-															<li><a href="#">Best of Best</a></li>
-														</ul>
-													</div>
-													<div class="col-md-3 md-margin-bottom-30">
-														<h2>커뮤니티</h2>
-														<ul class="dropdown-link-list">
-															<li><a href="#">자유게시판</a></li>
-															<li><a href="#">신나라 Talk! Talk!</a></li>
-															<li><a href="#">뜰</a></li>
-															<li><a href="#">커뮤니티</a></li>
-														</ul>
-													</div>
-                                                    <div class="col-md-3 md-margin-bottom-30">
-														<h2>아이템샵</h2>
-														<ul class="dropdown-link-list">
-															<li><a href="#">이용권구매</a></li>
-															<li><a href="#">딱지충전</a></li>
-															<li><a href="#">홍보아이템</a></li>
-															<li><a href="#">예약아이템</a></li>
-															<li><a href="#">후원쿠폰</a></li>
-														</ul>
-													</div>
-                                                    <div class="col-md-3 md-margin-bottom-30">
-														<h2>고객센터</h2>
-														<ul class="dropdown-link-list">
-															<li><a href="#">자주하는 질문</a></li>
-															<li><a href="#">1:1 문의</a></li>
-															<li><a href="#">공지사항</a></li>
-															<li><a href="#">이벤트</a></li>
-															<li><a href="#">광고/제휴문의</a></li>
-															<li><a href="#">저작권 보호센터</a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<!-- End Archives -->
-                            
-                            <!-- Fashion -->
-							<li class="dropdown mega-menu-fullwidth">
-								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-									예정
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<div class="mega-menu-content">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-3 md-margin-bottom-30">
-														<ul class="dropdown-link-list">
-															<li><a href="#">World</a></li>
-															<li><a href="#">Economy</a></li>
-															<li><a href="#">Sport</a></li>
-															<li><a href="#">Fashion</a></li>
-															<li><a href="#">Health</a></li>
-															<li><a href="#">Travel</a></li>
-															<li><a href="#">Lifestyle</a></li>
-															<li><a href="#">Hi-Tech</a></li>
-														</ul>
-													</div>
-													<div class="col-md-5 md-margin-bottom-30">
-														<!-- Blog Grid -->
-														<div class="blog-grid">
-															<img class="img-responsive" src="assets/img/blog/img9.jpg" alt="">
-															<h3 class="blog-grid-title-sm"><a href="blog_single.html">DB 조회수 가장 높은 거 올릴거임!</a></h3>
-														</div>
-														<!-- End Blog Grid -->
-													</div>
-													<div class="col-md-4">
-														<!-- Blog Thumb -->
-														<div class="blog-thumb margin-bottom-20">
-															<div class="blog-thumb-hover">
-																<img src="assets/img/blog/img16.jpg" alt="">
-																<a class="hover-grad" href="blog_single.html"><i class="fa fa-video-camera"></i></a>
-															</div>
-															<div class="blog-thumb-desc">
-																<h3><a href="blog_single.html">여러분과 함께 해서 영광입니다. ㅋㅋ</a></h3>
-																<ul class="blog-thumb-info">
-																	<li>Dec 10, 2016</li>
-																	<li><a href="blog_single.html"><i class="fa fa-comments"></i> 0</a></li>
-																</ul>
-															</div>
-														</div>
-														<!-- End Blog Thumb -->
-
-														<!-- Blog Thumb -->
-														<div class="blog-thumb margin-bottom-20">
-															<div class="blog-thumb-hover">
-																<img src="assets/img/blog/img15.jpg" alt="">
-																<a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
-															</div>
-															<div class="blog-thumb-desc">
-																<h3><a href="blog_single.html">쓸 말이 없다.</a></h3>
-																<ul class="blog-thumb-info">
-																	<li>Mar 6, 2017</li>
-																	<li><a href="blog_single.html"><i class="fa fa-comments"></i> 0</a></li>
-																</ul>
-															</div>
-														</div>
-														<!-- End Blog Thumb -->
-
-														<!-- Blog Thumb -->
-														<div class="blog-thumb margin-bottom-30">
-															<div class="blog-thumb-hover">
-																<img src="assets/img/blog/img17.jpg" alt="">
-																<a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
-															</div>
-															<div class="blog-thumb-desc">
-																<h3><a href="blog_single.html">프론트는 성혜가 해줬으면 좋겠다. ㅠ_ㅠ</a></h3>
-																<ul class="blog-thumb-info">
-																	<li>May 5,  2016</li>
-																	<li><a href="blog_single.html"><i class="fa fa-comments"></i> 0</a></li>
-																</ul>
-															</div>
-														</div>
-														<!-- End Blog Thumb -->
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</li>
-							<!-- End Fashion -->
-						</ul>
-					</div><!--/responsive container-->
-				</div><!--/navbar-collapse-->
-			</div><!--/end contaoner-->
-		</div>
-		<!-- End Navbar -->
-	</div>
-	<!--=== End Header v8 ===-->
+	<%@ include file="./commons/_header.jspf" %>
+	<!-- include file="./commons/_header.jspf"
+	언제 : 161217 10:59
+	어디서: 커피숍
+	누가: 김진국
+	무엇을 : 프로젝트 안 신나라 폴더 안에 콤몬즈 폴더에 "_헤더  제이에스피에프" 파일 만들었습니다.
+	왜 : 나중에 헤더 풋터를 쉽게 붙여넣어 쓰기 위하여! 헤더 풋터의 변경사항이 있다면 쉽게 변경하려고(유지 보수 용이)!
+		왜 제이에스'에프'로 했나? fragment(조각)이라는 말로 직관적으로 구분하기 위하여 변경하였습니다. 사용에 제이에스피와 아무 이상 없습니다.
+	어떻게 : 콤몬즈 폴더 안에 _header.jspf 파일 있으니깐 붙이고 싶은  페이지에  include file="./commons/_header.jspf"로 붙여 넣어주세요.
+			스크립트 밑 풋터쪽도 수정하여  넣겠습니다.
+	 -->
 
 	<!-- Master Slider -->
 	<div class="blog-ms-v1 content-sm bg-color-darker margin-bottom-60">
@@ -1810,125 +1507,17 @@
 	</div>
 	<!--=== End Container Part ===-->
 
-	<!--=== Footer v8 ===-->
-	<div class="footer-v8">
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6 column-one md-margin-bottom-50">
-						<a href="index.html"><img class="footer-logo" src="assets/img/themes/logo-sinnara-default.png" alt=""></a>
-						<p class="margin-bottom-20">신나라 프로젝트!<br/> 모두 항상 좋은 일만 있기를 기원합니다.<br/> 건강하세요. ^^</p>
-						<span>Headquarters:</span>
-						<p>서울시 강남구 테헤란로78길 16<br/>
-						(대치동, 노벨빌딩 5층)</p>
-						<hr>
-						<span>Call:</span>
-						<p>T. 02 3477 1300</p>
-						<p>F. 02 3453 1232</p>
-						<hr>
-						<span>Email Address:</span>
-						<a href="#">netsong7@naver.com</a>
-					</div>
-
-					<div class="col-md-3 col-sm-6 md-margin-bottom-50">
-						<h2>Tags</h2>
-						<!-- Tag Links v4 -->
-						<ul class="tags-v4 margin-bottom-40">
-							<li><a class="rounded-4x" href="#">java</a></li>
-							<li><a class="rounded-4x" href="#">novel</a></li>
-							<li><a class="rounded-4x" href="#">ant</a></li>
-							<li><a class="rounded-4x" href="#">web</a></li>
-							<li><a class="rounded-4x" href="#">buzz</a></li>
-							<li><a class="rounded-4x" href="#">joara</a></li>
-							<li><a class="rounded-4x" href="#">Project</a></li>
-							<li><a class="rounded-4x" href="#">study</a></li>
-							<li><a class="rounded-4x" href="#">google짱</a></li>
-							<li><a class="rounded-4x" href="#">html5</a></li>
-						</ul>
-						<!-- End Tag Links v4 -->
-
-						<h2>Useful Links</h2>
-						<!-- Footer Lists -->
-						<ul class="footer-lists">
-							<li><i class="fa fa-angle-right"></i><a href="#">NAVER</a></li>
-							<li><i class="fa fa-angle-right"></i><a href="#">Google</a></li>
-							<li><i class="fa fa-angle-right"></i><a href="#">Web Programming</a></li>
-							<li><i class="fa fa-angle-right"></i><a href="#">IT Forum</a></li>
-							<li><i class="fa fa-angle-right"></i><a href="#">Themes & sample</a></li>
-						</ul>
-						<!-- End Footer Lists -->
-					</div>
-
-					<div class="col-md-3 col-sm-6 md-margin-bottom-50">
-						<h2>최근 뉴스</h2>
-						<!-- Latest News -->
-						<div class="latest-news margin-bottom-20">
-							<img src="http://www.screengolfnews.com/PEG/13647958237295.jpg" alt="">
-							<h3><a href="#">대한민국 헌정 역사상 최악의...</a></h3>
-							<p>병신년 제 18대 대통령 박근혜는 결국 구속 되었다..</p>
-						</div>
-
-						<hr>
-
-						<div class="latest-news margin-bottom-20">
-							<img src="http://www.telegraph.co.uk/content/dam/motoring2/2015/12/02/1-2016-BMW-7-series-front-xlarge-large_trans++rWYeUU_H0zBKyvljOo6zlkYMapKPjdhyLnv9ax6_too.jpg" alt="">
-							<h3><a href="#">BMW 7-series review: better than a Mercedes S-class?</a></h3>
-							<p>Remember the James Bond movie Tomorrow Never Dies, specifically the Q-supplied BMW 7-series which could be driven by remote control? Well, BMW has now made it a reality.</p>
-						</div>
-
-						<hr>
-
-						<div class="latest-news">
-							<img src="http://www.kibwadg.org/upload/gallery/20140718_152300.jpg" alt="">
-							<h3><a href="#">웹타임. 안드로이드 개발과정 1기 수료식!</a></h3>
-							<p>내 머릿속엔 취업, 자바, 로맨틱, 성공적! 성공적은 뭘 말하는 거에요?<br/>
-							로맨틱하게 잘 성공하느냐 하는거지.</p>
-						</div>
-						<!-- End Latest News -->
-					</div>
-
-					<div class="col-md-3 col-sm-6">
-						<h2>Newsletter</h2>
-						<p><strong>Subscribe</strong> 우리의 레터를 구독하고 최신 작품과 작가로 최신 정보를 얻으십시오!</p><br>
-
-						<!-- Form Group -->
-						<div class="input-group margin-bottom-50">
-							<input class="form-control" type="email" placeholder="Enter email">
-							<div class="input-group-btn">
-								<button type="button" class="btn-u input-btn">Subscribe</button>
-							</div>
-						</div>
-						<!-- End Form Group -->
-
-						<h2>Social Network</h2>
-						<p><strong>Follow Us</strong> 진행 상황에 대한 최신 정보를 얻고 싶다면 SNS에 등록해주세요.</p><br>
-
-						<!-- Social Icons -->
-						<ul class="social-icon-list margin-bottom-20">
-							<li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>
-							<li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="rounded-x fa fa-dribbble"></i></a></li>
-						</ul>
-						<!-- End Social Icons -->
-					</div>
-				</div><!--/end row-->
-			</div><!--/end container-->
-		</footer>
-
-		<footer class="copyright">
-			<div class="container">
-				<ul class="list-inline terms-menu">
-					<li>2017 &copy; All Rights Reserved.</li>
-					<li class="home"><a href="#">Terms of Use</a></li>
-					<li><a href="#">Privacy and Policy</a></li>
-					<li>Theme by <a href="http://joara.com">joara.com</a></li>
-				</ul>
-			</div><!--/end container-->
-		</footer>
-	</div>
-	<!--=== End Footer v8 ===-->
+	<%@ include file="./commons/_footer.jspf" %>
+	<!-- 
+	언제 : 161217 10:59
+	어디서: 커피숍
+	누가: 김진국
+	무엇을 : 프로젝트 안 신나라 폴더 안에 콤몬즈 폴더에 "풋터 제이에스피에프" 파일 만들었습니다.
+	왜 : 나중에 헤더 풋터를 쉽게 쓰기 위하여! 헤더 풋터의 변경사항이 있다면 콤몬즈 파일의 제이에스에프 파일 쉽게 변경하려고(유지 보수 용이)!
+		왜 제이에스'에프'로 했냐? fragment(조각)이라는 말로 직관적으로 구분하기 위하여 변경하였습니다. 사용에 제이에스피와 아무 이상 없습니다.
+	어떻게 : 콤몬즈 폴더 안에 _footer.jspf 파일 있으니깐 페이지에  include file="./commons/_footer.jspf"로 붙여 넣어주세요.
+			스크립트 위 헤더쪽도 있습니다.
+	 -->
 
 	<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
 		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
@@ -1945,7 +1534,7 @@
 						<span class="social-login-twitter"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></span>
 					</p>
 
-					<div class="lined-text"><span>Or use your account on Blog</span><hr></div>
+					<div class="lined-text"><span>블로그 또는 SNS의 계정을 사용하십시오.</span><hr></div>
 
 					<p class="fieldset">
 						<label class="image-replace cd-email" for="signin-email">E-mail</label>
@@ -1975,41 +1564,70 @@
 			</div> <!-- cd-login -->
 
 			<div id="cd-signup"> <!-- sign up form -->
-				<form class="cd-form">
+				<form class="cd-form" action="main_loginInput/form_action.jsp" method="post">
 					<p class="social-login">
 						<span class="social-login-facebook"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></span>
 						<span class="social-login-google"><a href="#"><i class="fa fa-google"></i> Google</a></span>
 						<span class="social-login-twitter"><a href="#"><i class="fa fa-twitter"></i> Twitter</a></span>
 					</p>
 
-					<div class="lined-text"><span>또는 블로그에 새 계정을 등록하십시오.</span><hr></div>
+					<div class="lined-text"><span>블로그 또는 SNS에 새 계정을 등록하십시오.</span><hr></div>
 
 					<p class="fieldset">
+						<label class="image-replace cd-username" for="id">ID</label>
+						<input class="full-width has-padding has-border" value="123" id="id" name="id" type="text" placeholder="ID">
+						<span class="cd-error-message">Error message here!</span>
+						<!-- 
 						<label class="image-replace cd-username" for="signup-username">Username</label>
 						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<span class="cd-error-message">Error message here!</span> 밑에 것 복사!			
+						-->
+					</p>
+					
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="nickname">Nickname</label>
+						<input class="full-width has-padding has-border" value="123" id="nickname" name="nickname" type="text" placeholder="Nickname">
 						<span class="cd-error-message">Error message here!</span>
+						<!-- 
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<span class="cd-error-message">Error message here!</span>					
+						-->
 					</p>
 
 					<p class="fieldset">
+						<label class="image-replace cd-email" for="email">E-mail</label>
+						<input class="full-width has-padding has-border" value="" id="email" name="email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">이메일 형식에 맞게 입력해주세요.</span>
+						<!--
 						<label class="image-replace cd-email" for="signup-email">E-mail</label>
 						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
 						<span class="cd-error-message">Error message here!</span>
+						-->						
 					</p>
 
 					<p class="fieldset">
+						<label class="image-replace cd-password" for="password">Password</label>
+						<input class="full-width has-padding has-border" value="" id="password" name="password" type="text"  placeholder="Password">
+						<a href="javascript:void(0);" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+						<!-- 
 						<label class="image-replace cd-password" for="signup-password">Password</label>
 						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
 						<a href="javascript:void(0);" class="hide-password">Hide</a>
 						<span class="cd-error-message">Error message here!</span>
+						-->
 					</p>
 
 					<p class="fieldset">
 						<input type="checkbox" id="accept-terms">
-						<label for="accept-terms">I agree to the <a href="javascript:void(0);">Terms</a></label>
+						<a href="javascript:void(0);">Terms </a><label for="accept-terms">에 동의합니다. </label>
 					</p>
 
 					<p class="fieldset">
-						<input class="full-width has-padding" type="submit" value="Create account">
+						<!-- <input class="full-width has-padding" type="submit" value="Create account">
+						이건 왜 안 될까?-->
+						<button type="submit" class="btn btn-primary">전송</button>		
 					</p>
 				</form>
 
