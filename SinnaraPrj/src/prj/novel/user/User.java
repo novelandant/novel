@@ -1,5 +1,7 @@
 package prj.novel.user;
 
+import prj.novel.logininput.Database;
+
 public class User {
 	private String id;
 	private String nickname;
@@ -197,4 +199,85 @@ public class User {
 	public void setDppositor(String dppositor) {
 		this.dppositor = dppositor;
 	}
+
+
+
+
+	public boolean matchPassword(String newPassword) {
+		return this.pass.equals(newPassword);
+		/*
+		언제 : 161218 10:46
+		
+		어디서 : 커피숍
+		
+		누가 : 김진국
+		
+		무엇을 : 비밀번호 일치 or 유무 테스트를 위한 메서드 생성.
+		
+		왜 : 비밀번호 일치 or 유무 테스트의 단위테스트를 위하여!
+		
+		어떻게 : User.test.java에서 오류발생으로 인한 자동 생성!
+		*/
+	}
+
+	public static boolean login(String id, String pass) throws UserNotFoundException, PasswordMismatchException {
+		User user = Database.findByUserId(id);
+		if(user == null) {
+			throw new UserNotFoundException();
+		}
+		
+		if(!user.matchPassword(pass)) {
+			throw new PasswordMismatchException();
+		}
+		
+		return true;
+	}	
+		
+		public static boolean loginEmail(String email, String pass) throws UserNotFoundException, PasswordMismatchException {
+			User user = Database.findByUserEmail(email);
+			if(user == null) {
+				throw new UserNotFoundException();
+			}
+			
+			if(!user.matchPassword(pass)) {
+				throw new PasswordMismatchException();
+			}
+			
+			return true;
+		/*
+		언제 : 161218 11:14
+		
+		어디서 : 커피숍
+		
+		누가 : 김진국
+		
+		무엇을 : 로그인 하려할 때 아이디와 비밀번호 일치 or 유무 테스트를 위한 메서드 생성.
+		
+		왜 : 로그인 시 비밀번호 일치 or 유무 테스트의 단위테스트를 위하여!
+		
+		어떻게 : User.test.java에서 오류발생으로 인한 자동 생성!
+		 */
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", nickname=" + nickname + ", pass=" + pass + ", questioncode=" + questioncode
+				+ ", answer=" + answer + ", email=" + email + ", tel1=" + tel1 + ", tel2=" + tel2 + ", tel3=" + tel3
+				+ ", zip1=" + zip1 + ", zip2=" + zip2 + ", province=" + province + ", county=" + county + ", dong="
+				+ dong + ", detailaddr=" + detailaddr + ", recommed=" + recommed + ", bankcode=" + bankcode
+				+ ", deposit=" + deposit + ", dppositor=" + dppositor + "]";
+	}
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

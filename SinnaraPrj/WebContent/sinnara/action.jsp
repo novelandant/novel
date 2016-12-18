@@ -13,6 +13,6 @@
 	
 	out.println(id + " : " + pass + " : " + nickname + " : " + email);
 	
-	// response.sendRedirect("/");
+	response.sendRedirect("index.jsp");
 	
 %>

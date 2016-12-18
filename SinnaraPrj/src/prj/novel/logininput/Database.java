@@ -14,6 +14,10 @@ public class Database {
 	}
 
 	public static User findByUserId(String id) {
-		return users.get("id");
+		return users.get(id);
+	}
+
+	public static User findByUserEmail(String email) {
+		return users.get(email);
 	}
 }
