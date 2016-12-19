@@ -22,7 +22,7 @@
 	
 	out.println(id + " : " + pass + " : " + nickname + " : " + email);
 	
-	// response.sendRedirect("/");
+	response.sendRedirect("/SinnaraPrj/sinnara/index.jsp");
 	
 %>
 <!-- 

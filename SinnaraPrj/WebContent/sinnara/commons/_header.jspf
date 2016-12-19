@@ -113,11 +113,14 @@
 				if (email == null) {
 			%>
 				<li><a href="javascript:void(0);">로그인</a></li>
+				<!-- <li><a href="/login.jsp">로그인</a></li> -->
 				<li><a href="javascript:void(0);">회원가입</a></li>
+				<!-- <li><a href="/form.jsp">회원가입</a></li> -->
 			<%
 				} else {
 			%>	
 				<li><a href="javascript:void(0);">로그아웃</a></li>
+				<!-- <li><a href="/users/logout">로그아웃</a></li> -->
 				<li><a href="javascript:void(0);">마이페이지</a></li>
 			<%
 				}
@@ -125,7 +128,18 @@
 			</ul>
 
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form" action="laction.jsp" method="post">
+				<form class="cd-form" action="/SinnaraPrj/users/login" method="post">
+					<%
+						Object errorMessage = request.getAttribute("errorMessage");
+					if (errorMessage != null) {
+					%>	
+					<div class="cotrol-group">
+						<label class="error"><%= errorMessage %></label>					
+					</div>
+					<%
+					}
+					%>
+					
 					<p class="social-login">
 						<span class="social-login-facebook"><a href="#"><i class="fa fa-facebook"></i> Facebook</a></span>
 						<span class="social-login-google"><a href="#"><i class="fa fa-google"></i> Google</a></span>
@@ -163,8 +177,14 @@
 				<!-- <a href="javascript:void(0);" class="cd-close-form">Close</a> -->
 			</div> <!-- cd-login -->
 
+
+
+
+
+
+
 			<div id="cd-signup"> <!-- sign up form -->
-				<form class="cd-form" action="action.jsp" method="post">
+				<form class="cd-form" action="/SinnaraPrj/users/save" method="post">
 				<!-- <form class="cd-form" action="main_loginInput/form_action.jsp" method="post">
 				-->	
 					<p class="social-login">
@@ -377,7 +397,7 @@
                             <!-- Fashion -->
 							<li class="dropdown mega-menu-fullwidth">
 								<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-									예정
+									프로젝트 소개
 								</a>
 								<ul class="dropdown-menu">
 									<li>
@@ -386,14 +406,15 @@
 												<div class="row">
 													<div class="col-md-3 md-margin-bottom-30">
 														<ul class="dropdown-link-list">
-															<li><a href="#">World</a></li>
-															<li><a href="#">Economy</a></li>
-															<li><a href="#">Sport</a></li>
-															<li><a href="#">Fashion</a></li>
-															<li><a href="#">Health</a></li>
-															<li><a href="#">Travel</a></li>
-															<li><a href="#">Lifestyle</a></li>
-															<li><a href="#">Hi-Tech</a></li>
+															<li><a href="#">1. 제목</a></li>
+															<li><a href="#">2. 목차</a></li>
+															<li><a href="#">3. 개발 배경</a></li>
+															<li><a href="#">4. 목적</a></li>
+															<li><a href="#">5. 산출물</a></li>
+															<li><a href="#">6. 개발 환경</a></li>
+															<li><a href="#">7. 스토리보드</a></li>
+															<li><a href="#">8. 시연</a></li>
+															<li><a href="#">9. 구성원 소개</a></li>
 														</ul>
 													</div>
 													<div class="col-md-5 md-margin-bottom-30">
