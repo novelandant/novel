@@ -106,9 +106,8 @@
 	<c:set var="loginID" value="testid1" scope="session" />
 	<c:set var="page_gubun" value="${param.page}" scope="session"/>
 
+	<jsp:include page="/sinnara/commons/_header.jspf"></jsp:include>
 	<div id="wrap">
-		<%@ include file="../inc/message_header.jsp"%>
-		
 		<div id="container" class="clearfix">
 			<%@ include file="../inc/message_left.jsp"%>
 
