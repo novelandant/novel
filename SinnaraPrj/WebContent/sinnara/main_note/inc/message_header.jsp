@@ -3,12 +3,6 @@
 		<header id="header">
 			<div class="topBar_wrap">
 				<div class="topBar">
-					<div class="menu">
-						<a href="www.joara.com" title="joara.com" class="bookmark">즐겨찾기</a><a
-							href="https://play.google.com/store/apps/details?id=com.joara.mobile"
-							target="_blank" class="app">신나라 앱 다운로드
-						</a>
-					</div>
 					<div class="info">
 						<strong class="user">팔강공주 님 &nbsp;
 							<span class="member_nickname" member_id="supercjm" style="cursor: pointer;">
@@ -47,36 +41,11 @@
 						<span style="margin-left: 20px"><img src="../images/common/h2_webso_on.png" alt="웹소설" /></span>
 					</a> 
 					<img src="../images/common/img_h1bg.gif" alt=""	style="margin-left: 10px" /> 
-					<a href="/webtoon/">
-						<span style="margin-left: 10px;">
-							<img src="../images/common/h2_webtoon_off.png" alt="웹툰" />
-						</span>
-					</a>
 				</div>
 				<form name="mainSearchForm" method="get" class="totalSearchArea" action="/search/search.html" onsubmit="return mainSearch(this);">
-					<fieldset>
-						<legend>통합검색</legend>
-						<input type="hidden" name="sl_search" value="book"> 
-						<input type="text" id="search" name="sl_keyword" value="" title="검색어 입력" size="10" class="inputText">
-						<input type="image"	src="../images/common/btn_totalSearch.gif" alt="검색"> 
-						<span style="position: relative;">
-							<img src="../images/common/img_beta.gif" alt="" />
-						</span>
-					</fieldset>
 				</form>
 			
 				<div class="banner">
-					<div id="roll_banner_control" class="pagt" style="z-index: 100">
-						<strong><span id="cur_roll_banner_count">1</span></strong>/
-						<span id="max_roll_banner_count">0</span>
-						<a href="#"	onclick="return false" name="prev">
-							<img src="../images/common/btn_prev.gif" alt="이전">
-						</a>
-						<a href="#"	onclick="return false" name="next">
-							<img src="../images/common/btn_next.gif" alt="다음">
-						</a>
-					</div>
-					
 					<div class="roll_banner" name="0" style="display: none"></div>
 					<div class="roll_banner" name="1" style="display: none"></div>
 					<div class="roll_banner" name="2" style="display: none">
