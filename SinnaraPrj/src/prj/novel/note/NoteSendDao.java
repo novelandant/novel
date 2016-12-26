@@ -17,7 +17,7 @@ public class NoteSendDao {
 	public NoteSendDao(){
 		try{
 			Context ctx = new InitialContext();
-			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/oracleDB");
+			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/mysqlDB");
 		}
 
 		catch(Exception err){
@@ -93,7 +93,7 @@ public class NoteSendDao {
 			con = ds.getConnection();
 			
 			sql = "SELECT NOTE2_SENDNUM, NOTE2_SUBJECT, NOTE2_CONTENT, NOTE2_REGDATE, NOTE2_RECEIVEID, " + 
-					"		NOTE2_SENDID, NOTE2_GETIDENTIFY, NVL(NOTE2_GETDATE,'1999/01/01') NOTE2_GETDATE, " + 
+					"		NOTE2_SENDID, NOTE2_GETIDENTIFY, IFNULL(NOTE2_GETDATE,'1999/01/01') NOTE2_GETDATE, " + 
 					"		NOTE2_KEEPYN FROM NOTE2_SEND WHERE note2_sendnum = ?";
 			
 			pstmt = con.prepareStatement(sql);

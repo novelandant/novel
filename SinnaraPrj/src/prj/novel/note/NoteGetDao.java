@@ -18,7 +18,7 @@ public class NoteGetDao {
 	public NoteGetDao(){
 		try{
 			Context ctx = new InitialContext();
-			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/oracleDB");
+			ds = (DataSource)ctx.lookup("java:comp/env/jdbc/mysqlDB");
 		}
 
 		catch(Exception err){

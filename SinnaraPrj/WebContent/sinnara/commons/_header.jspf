@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
 	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
 	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/skins/default/style.css">
-
+ 
 	<!-- CSS Theme -->
 	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
 	<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
@@ -60,7 +60,7 @@
 						<ul class="topbar-list topbar-menu">
 							<li><a href="#">SINNARA</a></li>
 							<li><a href="#">Contact</a></li>
-							<li><a href="https://www.instagram.com/buzzminkyunghoon/">최정민</a></li>
+							<li><a href="main_note/message/receive_message_list.jsp?page=receive">쪽지</a></li>
                             <li><a href="https://youtu.be/zLN0aacAmQs">김진국</a></li>
                             <li><a href="http://www.sarang.org ">김재환</a></li>
                             <li><a href="http://cafe.daum.net/SoulDressercafe">정성혜</a></li>
@@ -70,7 +70,7 @@
 								<a href="javascript:void(0);">마이페이지</a>
 								<ul class="topbar-dropdown">
 									<li><a href="#">마이페이지</a></li>
-									<li><a href="#">쪽지보내기</a></li>
+									<li><a href="main_note/message/send_message.jsp">쪽지보내기</a></li>
 									<li class="topbar-submenu">
 										<a href="javascript:void(0);">모으기</a>
 										<ul class="topbar-submenu-in">
@@ -81,7 +81,7 @@
 												<ul class="topbar-submenu-in">
 													<li><a href="#">이용권</a></li>
 													<li><a href="#">아이템</a></li>
-												</ul>
+												</ul> 
 											</li>
 										</ul>
 									</li>
