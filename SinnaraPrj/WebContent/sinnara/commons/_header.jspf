@@ -13,29 +13,29 @@
 	<!-- Web Fonts -->
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?amily=Roboto+Slab:400,300,700">
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/blog.style.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/css/blog.style.css">
 
 	<!-- CSS Header and Footer -->
-	<link rel="stylesheet" href="assets/css/headers/header-v8.css">
-	<link rel="stylesheet" href="assets/css/footers/footer-v8.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/css/headers/header-v8.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/css/footers/footer-v8.css">
 
 	<!-- CSS Implementing Plugins -->
-	<link rel="stylesheet" href="assets/plugins/animate.css">
-	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-	<link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/login-signup-modal-window/css/style.css">
-	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/style/masterslider.css">
-	<link rel="stylesheet" href="assets/plugins/master-slider/masterslider/skins/default/style.css">
- 
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/animate.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/line-icons/line-icons.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/fancybox/source/jquery.fancybox.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/login-signup-modal-window/css/style.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/master-slider/masterslider/style/masterslider.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/plugins/master-slider/masterslider/skins/default/style.css">
+
 	<!-- CSS Theme -->
-	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
-	<link rel="stylesheet" href="assets/css/theme-skins/dark.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/css/theme-colors/default.css" id="style_color">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/css/theme-skins/dark.css">
 
 	<!-- CSS Customization -->
-	<link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/assets/css/custom.css">
 </head>
 
 <body class="header-fixed header-fixed-space-v2">
@@ -60,7 +60,7 @@
 						<ul class="topbar-list topbar-menu">
 							<li><a href="#">SINNARA</a></li>
 							<li><a href="#">Contact</a></li>
-							<li><a href="main_note/message/receive_message_list.jsp?page=receive">쪽지</a></li>
+							<li><a href="/SinnaraPrj/sinnara/main_note/message/receive_message_list.jsp?page=receive">쪽지</a></li>
                             <li><a href="https://youtu.be/zLN0aacAmQs">김진국</a></li>
                             <li><a href="http://www.sarang.org ">김재환</a></li>
                             <li><a href="http://cafe.daum.net/SoulDressercafe">정성혜</a></li>
@@ -70,7 +70,7 @@
 								<a href="javascript:void(0);">마이페이지</a>
 								<ul class="topbar-dropdown">
 									<li><a href="#">마이페이지</a></li>
-									<li><a href="main_note/message/send_message.jsp">쪽지보내기</a></li>
+									<li><a href="/SinnaraPrj/sinnara/main_note/message/send_message.jsp">쪽지보내기</a></li>
 									<li class="topbar-submenu">
 										<a href="javascript:void(0);">모으기</a>
 										<ul class="topbar-submenu-in">
@@ -81,7 +81,7 @@
 												<ul class="topbar-submenu-in">
 													<li><a href="#">이용권</a></li>
 													<li><a href="#">아이템</a></li>
-												</ul> 
+												</ul>
 											</li>
 										</ul>
 									</li>
@@ -291,8 +291,8 @@
 					</button>
 
 					<div class="navbar-brand">
-						<a href="index.html">
-							<img src="assets/img/themes/logo-sinnara-default.png" alt="Logo">
+						<a href="/SinnaraPrj/sinnara/index.jsp">
+							<img src="/SinnaraPrj/sinnara/assets/img/themes/logo-sinnara-default.png" alt="Logo">
 						</a>
 					</div>
 				</div><!--/end responsive container-->
@@ -319,7 +319,7 @@
 							<!-- Main Demo -->
                                                         
                             <!-- Main Demo -->
-							<li><a href="../main_itemShop.jsp">아이템샵</a></li>
+							<li><a href="/SinnaraPrj/sinnara/main_itemShop/main_itemShop.jsp">아이템샵</a></li>
 							<!-- Main Demo -->
                                                         
                             <!-- Main Demo -->
@@ -420,7 +420,7 @@
 													<div class="col-md-5 md-margin-bottom-30">
 														<!-- Blog Grid -->
 														<div class="blog-grid">
-															<img class="img-responsive" src="assets/img/blog/img9.jpg" alt="">
+															<img class="img-responsive" src="/SinnaraPrj/sinnara/assets/img/blog/img9.jpg" alt="">
 															<h3 class="blog-grid-title-sm"><a href="blog_single.html">DB 조회수 가장 높은 거 올릴거임!</a></h3>
 														</div>
 														<!-- End Blog Grid -->
@@ -429,7 +429,7 @@
 														<!-- Blog Thumb -->
 														<div class="blog-thumb margin-bottom-20">
 															<div class="blog-thumb-hover">
-																<img src="assets/img/blog/img16.jpg" alt="">
+																<img src="/SinnaraPrj/sinnara/assets/img/blog/img16.jpg" alt="">
 																<a class="hover-grad" href="blog_single.html"><i class="fa fa-video-camera"></i></a>
 															</div>
 															<div class="blog-thumb-desc">
@@ -445,7 +445,7 @@
 														<!-- Blog Thumb -->
 														<div class="blog-thumb margin-bottom-20">
 															<div class="blog-thumb-hover">
-																<img src="assets/img/blog/img15.jpg" alt="">
+																<img src="/SinnaraPrj/sinnara/assets/img/blog/img15.jpg" alt="">
 																<a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
 															</div>
 															<div class="blog-thumb-desc">
@@ -461,7 +461,7 @@
 														<!-- Blog Thumb -->
 														<div class="blog-thumb margin-bottom-30">
 															<div class="blog-thumb-hover">
-																<img src="assets/img/blog/img17.jpg" alt="">
+																<img src="/SinnaraPrj/sinnara/assets/img/blog/img17.jpg" alt="">
 																<a class="hover-grad" href="blog_single.html"><i class="fa fa-photo"></i></a>
 															</div>
 															<div class="blog-thumb-desc">
