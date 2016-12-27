@@ -3,7 +3,7 @@
 		<div id="side_bar" class="main_side_bar">
 			<a href="#" class="nav_side_bar">Collapse</a>
 			<ul class="side_list">
-				<li class="first"><a href="/mypage/" class="btn_login">마이페이지</a></li>
+				<li class="first"><a href="#" class="btn_login">마이페이지</a></li>
 				<li>
 					<a href="#" onclick="return false;" name="favor_book" class="btn_side_tit1 sb_slide_menu">선호 작품</a>
 					<div style="display:none;">
@@ -47,9 +47,9 @@
 					<a href="#" name="buy_item" class="btn_side_tit4 sb_slide_menu">이용권 구매</a>
 					<div style="display:none;">
 						<ul class="item_shop">
-							<li><a href="/itemshop/ticket_nobless.html?check_item=1"><img src="../images/common/btn_item1.gif" alt="1일 자유이용권"></a></li>
-							<li><a href="/itemshop/ticket_nobless.html?check_item=3"><img src="../images/common/btn_item2.gif" alt="3일 자유이용권"></a></li>
-							<li><a href="/itemshop/ticket_nobless.html?check_item=30"><img src="../images/common/btn_item3.gif" alt="30일 자유이용권"></a></li>
+							<li><a href="#"><img src="../images/common/btn_item1.gif" alt="1일 자유이용권"></a></li>
+							<li><a href="#"><img src="../images/common/btn_item2.gif" alt="3일 자유이용권"></a></li>
+							<li><a href="#"><img src="../images/common/btn_item3.gif" alt="30일 자유이용권"></a></li>
 						</ul>
 					</div>
 				</li>
@@ -58,6 +58,6 @@
 
 		<div style="position: absolute;top: 176px;right:50%;margin-right: -640px;">
 			<span class='random_banner' style='display:none'></span>
-			<a href="http://banner.joara.com/banner/bannerGoUrl.inc.php?idx=2461&url=http%3A%2F%2Fwww.joara.com%2Fcs%2Fnotice%2Fview.html%3Fidx%3D253179%26page_no%3D1%26sl_search%3D%26sl_keyword%3D%26sub_bbsid%3D%26orderby%3D" hidefocus='true' target='_blank'><IMG height=600 src="http://cf.joara.com/banner_file/20161201_100612.jpg" width=130 border=0></a>
+			<a href="#" hidefocus='true' target='_blank'><IMG height=600 src="http://cf.joara.com/banner_file/20161201_100612.jpg" width=130 border=0></a>
 			<img src='http://banner.joara.com/banner/bannerView.inc.php?idx=2461' style='display:none'>	
 		</div>

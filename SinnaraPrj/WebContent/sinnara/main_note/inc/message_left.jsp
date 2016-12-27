@@ -10,28 +10,28 @@
 							<div class="user">
 								<p class="photo">
 									<img src="http://cf.joara.com/user_file/default_01.png"	width="53" height="53">
-									<a href="javascript:newWindow('/mypage/user/pop_author.html','popAuthor','width=465,height=440')" class="edit">
+									<a href="#" class="edit">
 									<img src="../images/mypage/btn_edit.gif" alt="edit"></a>
 								</p>
 								<p class="nickname">
 									<strong>팔강공주 </strong>님
 								</p>
 								<p class="setting">
-									<a href="/logOut.html">
+									<a href="#">
 										<img src="../images/mypage/btn_logout.gif" alt="로그아웃">
 									</a>
 								</p>
 							</div>
 							<div class="user_info">
 								<ul>
-									<li>쪽지 : <span class="info"><a href="/message/">0</a>개</span></li>
-									<li>마나 : <span class="info"><a href="/mypage/item/point_list.html">1,100</a>M</span></li>
+									<li>쪽지 : <span class="info"><a href="#">0</a>개</span></li>
+									<li>마나 : <span class="info"><a href="#">1,100</a>M</span></li>
 								</ul>
 							</div>
 							<div class="user_info date">
 								<p class="none">
 									이용권이없습니다. 
-									<a href="/itemshop/ticket_nobless.html"	class="btn_buy">
+									<a href="#"	class="btn_buy">
 										<img src="../images/mypage/btn_buy.gif" alt="구매">
 									</a>
 								</p>
@@ -100,10 +100,10 @@
 				<!-- 배너 영역 -->
 				<div class="my_menu">
 					<div class="inBox clearfix">
-						<a href="http://yard.joara.com/main.html" class="btn">
+						<a href="#" class="btn">
 							<img src="../images/common/btn_mymenu1.gif" alt="나의뜰 바로가기">
 						</a>
-						<a href="/mypage/notebook/literature_list.html" class="btn">
+						<a href="#" class="btn">
 							<img src="../images/common/btn_mymenu2.gif" alt="작품등록 바로가기">
 						</a>
 
@@ -118,13 +118,10 @@
 							<form name="quickForm">
 								<select id="" class="select" style="width: 95px;" onchange="goQuickMenu(this.form, this.value);">
 									<option value="">나의 메뉴</option>
-									<option value="/literature/view/book_list.html">연재작품</option>
-									<option	value="/best/today_best_list.html?page_no=1&sl_subcategory=all">투데이 베스트</option>
-									<option value="/board/free_board_list.html">자유게시판</option>
 								</select>
 							</form>
 						</div>
-						<a href="javascript:newWindow('/modules/html/quickmenu_setting.html', 'quick', 'width=465, height=600, scrollbars=yes')" class="set">관리</a>
+						<a href="#" class="set">관리</a>
 					</div>
 				</div>
 				
