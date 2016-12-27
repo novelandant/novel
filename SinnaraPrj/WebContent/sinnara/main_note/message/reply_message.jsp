@@ -50,7 +50,7 @@
 </head>
 
 <body id="body_m" class="" >
-	<div id="dialog" title="알림">
+	<div id="dialog" title="알림" style="display:none">
 	  <p>보낼 쪽지 내용을 입력 하세요.</p>
 	</div>
 

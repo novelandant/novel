@@ -76,8 +76,8 @@
 						alert('답장은 1:1로 가능합니다. 하나의 쪽지만 선택해 주세요');
 						return false;
 					}else{
-						var rev_id=$('input:checkbox[name="message_idx"]:checked').attr('rev_id');
-						location.href="reply_message.jsp?page="+$("#page").val()+"&rev_id="+rev_id;
+						var rev_id=$('input:checkbox[id="message_idx"]').val();
+						location.href="/SinnaraPrj/sinnara/main_note/message/reply_message.jsp?msgNum=" + rev_id;
 					}
 				} else {
 					alert("선택된 쪽지가 없습니다.");
@@ -161,6 +161,8 @@
 					String pGubun = (String)session.getAttribute("page_gubun");
 					String loginUser = (String)session.getAttribute("loginID");
 					
+					if (loginUser==null || loginUser=="") {response.sendRedirect("/SinnaraPrj/sinnara/index.jsp");}
+					
 					ArrayList noteList = null;
 					
 					if (pGubun==null || pGubun=="") {pGubun="receive";}
@@ -233,7 +235,7 @@
 										<td class="cen">${receiveNote.getNote_sendid()}</td>
 										<td class="left"><a	href="view_message.jsp?msgNum=${receiveNote.getNote_getnum()}">${receiveNote.getNote_subject()}</a></td>
 										<td class="cen">${receiveNote.getNote_regdate()}</td>
-										<td class="cen"><a href="pop_report.html?msgNum=4081901&friend_id=brianpark928&page="
+										<td class="cen"><a href="#"
 											class="nyroModal">차단 <span class="line">|</span> 신고 </a></td>
 									</tr>
 								</c:forEach>
@@ -249,9 +251,9 @@
 		</div>
 		<!-- container -->	
 
-		<%@ include file="../inc/message_right.jsp"%>
 	</div>
-
+	
+	<%@ include file="../inc/message_right.jsp"%>
 <!-- wrap end -->
 <!-- footer -->
 	

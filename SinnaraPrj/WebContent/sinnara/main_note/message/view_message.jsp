@@ -97,7 +97,7 @@
 					<div class="path">
 						홈 &gt; 쪽지 &gt; 
 						<select class="fe_select" onchange="location.href=this.value">
-							<option value="receive_message_list.jsp" selected>받은 쪽지함</option>
+							<option value="receive_message_list.jsp?page=receive" selected>받은 쪽지함</option>
 							<option value="receive_message_list.jsp?page=send" >보낸 쪽지함</option>
 							<option value="receive_message_list.jsp?page=r_store" >받은 쪽지 보관함</option>
 							<option value="receive_message_list.jsp?page=s_store" >보낸 쪽지 보관함</option>
@@ -109,8 +109,8 @@
 					<div class="message_view_option">
 						<a href="#" id="btn_motion" class="btn_delete" mode="message_del" ><span>삭제</span></a> 
 						<a href="#" id="btn_motion" mode="message_store" class="btn_message" ><span>보관</span></a>
-						<a href="write.html?page=&rev_id=brianpark928" class="btn_message"><span>답장</span></a>
-						<a href="list.html?page=" class="btn_view_list">목록</a>
+						<a href="reply_message.jsp?msgNum=${noteDto.getNote_getnum()}" class="btn_message"><span>답장</span></a>
+						<a href="receive_message_list.jsp?page=receive" class="btn_view_list">목록</a>
 						<span class="list_btn">
 							<a href="" class="prev" style="background:url('../images/message/btn_prev.gif') no-repeat left top;">이전</a>|
 							<a href="" class="next" style="background:url('../images/message/btn_next.gif') no-repeat right top;">다음</a>

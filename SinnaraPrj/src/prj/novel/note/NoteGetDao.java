@@ -329,7 +329,9 @@ public class NoteGetDao {
 		try{
 			con = ds.getConnection();
 			
-			sql = "select count(*) count from note2_send where note2_receiveid = ? and NOTE2_GETIDENTIFY = 'N'";
+			sql = "select count(*) count from note_get where NOTE2_SENDNUM in "
+					+ "(select NOTE2_SENDNUM from NOTE2_SEND where NOTE2_GETIDENTIFY = 'N') and NOTE_RECEIVEID = ?";
+			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, receiveID);
 
