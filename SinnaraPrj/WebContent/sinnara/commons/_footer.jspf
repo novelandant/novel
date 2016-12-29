@@ -1,0 +1,120 @@
+<%@ page contentType="text/html; charset=EUC-KR" %>
+	<!--=== Footer v8 ===-->
+	<div class="footer-v8">
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6 column-one md-margin-bottom-50">
+						<a href="index.html"><img class="footer-logo" src="assets/img/themes/logo-sinnara-default.png" alt=""></a>
+						<p class="margin-bottom-20">신나라 프로젝트!<br/> 모두 항상 좋은 일만 있기를 기원합니다.<br/> 건강하세요. ^^</p>
+						<span>Headquarters:</span>
+						<p>서울시 강남구 테헤란로78길 16<br/>
+						(대치동, 노벨빌딩 5층)</p>
+						<hr>
+						<span>Call:</span>
+						<p>T. 02 3477 1300</p>
+						<p>F. 02 3453 1232</p>
+						<hr>
+						<span>Email Address:</span>
+						<a href="#">netsong7@naver.com</a>
+					</div>
+
+					<div class="col-md-3 col-sm-6 md-margin-bottom-50">
+						<h2>Tags</h2>
+						<!-- Tag Links v4 -->
+						<ul class="tags-v4 margin-bottom-40">
+							<li><a class="rounded-4x" href="#">java</a></li>
+							<li><a class="rounded-4x" href="#">novel</a></li>
+							<li><a class="rounded-4x" href="#">ant</a></li>
+							<li><a class="rounded-4x" href="#">web</a></li>
+							<li><a class="rounded-4x" href="#">buzz</a></li>
+							<li><a class="rounded-4x" href="#">joara</a></li>
+							<li><a class="rounded-4x" href="#">Project</a></li>
+							<li><a class="rounded-4x" href="#">study</a></li>
+							<li><a class="rounded-4x" href="#">google짱</a></li>
+							<li><a class="rounded-4x" href="#">html5</a></li>
+						</ul>
+						<!-- End Tag Links v4 -->
+
+						<h2>Useful Links</h2>
+						<!-- Footer Lists -->
+						<ul class="footer-lists">
+							<li><i class="fa fa-angle-right"></i><a href="#">NAVER</a></li>
+							<li><i class="fa fa-angle-right"></i><a href="#">Google</a></li>
+							<li><i class="fa fa-angle-right"></i><a href="#">Web Programming</a></li>
+							<li><i class="fa fa-angle-right"></i><a href="#">IT Forum</a></li>
+							<li><i class="fa fa-angle-right"></i><a href="#">Themes & sample</a></li>
+						</ul>
+						<!-- End Footer Lists -->
+					</div>
+
+					<div class="col-md-3 col-sm-6 md-margin-bottom-50">
+						<h2>최근 뉴스</h2>
+						<!-- Latest News -->
+						<div class="latest-news margin-bottom-20">
+							<img src="http://www.screengolfnews.com/PEG/13647958237295.jpg" alt="">
+							<h3><a href="#">대한민국 헌정 역사상 최악의...</a></h3>
+							<p>병신년 제 18대 대통령 박근혜는 결국 구속 되었다..</p>
+						</div>
+
+						<hr>
+
+						<div class="latest-news margin-bottom-20">
+							<img src="http://www.telegraph.co.uk/content/dam/motoring2/2015/12/02/1-2016-BMW-7-series-front-xlarge-large_trans++rWYeUU_H0zBKyvljOo6zlkYMapKPjdhyLnv9ax6_too.jpg" alt="">
+							<h3><a href="#">BMW 7-series review: better than a Mercedes S-class?</a></h3>
+							<p>Remember the James Bond movie Tomorrow Never Dies, specifically the Q-supplied BMW 7-series which could be driven by remote control? Well, BMW has now made it a reality.</p>
+						</div>
+
+						<hr>
+
+						<div class="latest-news">
+							<img src="http://www.kibwadg.org/upload/gallery/20140718_152300.jpg" alt="">
+							<h3><a href="#">웹타임. 안드로이드 개발과정 1기 수료식!</a></h3>
+							<p>내 머릿속엔 취업, 자바, 로맨틱, 성공적! 성공적은 뭘 말하는 거에요?<br/>
+							로맨틱하게 잘 성공하느냐 하는거지.</p>
+						</div>
+						<!-- End Latest News -->
+					</div>
+
+					<div class="col-md-3 col-sm-6">
+						<h2>Newsletter</h2>
+						<p><strong>Subscribe</strong> 우리의 레터를 구독하고 최신 작품과 작가로 최신 정보를 얻으십시오!</p><br>
+
+						<!-- Form Group -->
+						<div class="input-group margin-bottom-50">
+							<input class="form-control" type="email" placeholder="Enter email">
+							<div class="input-group-btn">
+								<button type="button" class="btn-u input-btn">Subscribe</button>
+							</div>
+						</div>
+						<!-- End Form Group -->
+
+						<h2>Social Network</h2>
+						<p><strong>Follow Us</strong> 진행 상황에 대한 최신 정보를 얻고 싶다면 SNS에 등록해주세요.</p><br>
+
+						<!-- Social Icons -->
+						<ul class="social-icon-list margin-bottom-20">
+							<li><a href="#"><i class="rounded-x fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="rounded-x fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="rounded-x fa fa-linkedin"></i></a></li>
+							<li><a href="#"><i class="rounded-x fa fa-google-plus"></i></a></li>
+							<li><a href="#"><i class="rounded-x fa fa-dribbble"></i></a></li>
+						</ul>
+						<!-- End Social Icons -->
+					</div>
+				</div><!--/end row-->
+			</div><!--/end container-->
+		</footer>
+
+		<footer class="copyright">
+			<div class="container">
+				<ul class="list-inline terms-menu">
+					<li>2017 &copy; All Rights Reserved.</li>
+					<li class="home"><a href="#">Terms of Use</a></li>
+					<li><a href="#">Privacy and Policy</a></li>
+					<li>Theme by <a href="http://joara.com">joara.com</a></li>
+				</ul>
+			</div><!--/end container-->
+		</footer>
+	</div>
+	<!--=== End Footer v8 ===-->
