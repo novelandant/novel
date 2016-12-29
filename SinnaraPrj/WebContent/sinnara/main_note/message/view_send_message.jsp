@@ -14,8 +14,8 @@
 	<title>신나라 : 문화의 시작 - </title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="/fcon.ico">
-	<link rel="stylesheet" type="text/css" href="../joara_css/base.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/base.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/content.css" media="all">
 							
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -25,8 +25,8 @@
 	<script type="text/javascript" src="https://s3-ap-northeast-1.amazonaws.com/joara-cdn/js/jq.nyroModal.custom.js"></script>
 	
 	<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
-	<link rel="stylesheet" href="../joara_css/nyroModal.css" type="text/css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="../message_css/sinara_message.css" media="all">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/main_note/joara_css/nyroModal.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/message_css/sinara_message.css" media="all">
 
 	<script type="text/javascript">
 		$(function() {
@@ -58,25 +58,8 @@
 
 <body id="body_m" class="" >
 
-	<jsp:useBean id="dao" class="prj.novel.note.NoteSendDao" />
-	<jsp:useBean id="Gdao" class="prj.novel.note.NoteGetDao" />
-	
-	<%
-		int num = Integer.parseInt(request.getParameter("msgNum"));
-		NoteSendDto noteDto = dao.getNoteSendBySendNum(num, "read");
-		pageContext.setAttribute("noteDto", noteDto);
-
-		String loginUser = (String)session.getAttribute("loginID");
-		String pageGubun = (String)session.getAttribute("page_gubun");
-		
-		HashMap msgMap = new HashMap();
-		msgMap = Gdao.getPrevNextNum(loginUser, pageGubun, num);
-		
-		pageContext.setAttribute("msgMap", msgMap);
-	%>
-	
 	<div id="wrap">
-		<%@ include file="../inc/message_header.jsp"%>
+		<%@ include file="/sinnara/main_note/inc/message_header.jsp"%>
 	
 		<form id="messageViewForm" method="post" action="message_proc.jsp">
 			<input type="hidden" id="message_mode" name="message_mode" >
@@ -88,18 +71,18 @@
 		</form>
 	
 		<div id="container" class="clearfix">
-			<%@ include file="../inc/message_left.jsp"%>
+			<%@ include file="/sinnara/main_note/inc/message_left.jsp"%>
 			
 			<div id="content">
 				<div class="title">
-					<h3><img src="../images/message/t_send_message.gif" alt="보낸 쪽지함"></h3>
+					<h3><img src="/SinnaraPrj/sinnara/main_note/images/message/t_send_message.gif" alt="보낸 쪽지함"></h3>
 					<div class="path">
 						홈 &gt; 쪽지 &gt; 
 						<select class="fe_select" onchange="location.href=this.value">
-							<option value="receive_message_list.jsp?page=receive" selected>받은 쪽지함</option>
-							<option value="send_message_list.jsp?page=send" >보낸 쪽지함</option>
-							<option value="receive_message_list.jsp?page=r_store" >받은 쪽지 보관함</option>
-							<option value="send_message_list.jsp?page=s_store" >보낸 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE">받은 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND" selected>보낸 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=R_STORE">받은 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=S_STORE">보낸 쪽지 보관함</option>
 							<option value="send_message.html" >쪽지 보내기</option>
 						</select>
 					</div>
@@ -111,8 +94,8 @@
 
 						<a href="send_message_list.jsp?page=send" class="btn_view_list">목록</a>
 						<span class="list_btn">
-							<a href="" class="prev" style="background:url('../images/message/btn_prev.gif') no-repeat left top;">이전</a>|
-							<a href="" class="next" style="background:url('../images/message/btn_next.gif') no-repeat right top;">다음</a>
+							<a href="" class="prev" style="background:url('/SinnaraPrj/sinnara/main_note/images/message/btn_prev.gif') no-repeat left top;">이전</a>|
+							<a href="" class="next" style="background:url('/SinnaraPrj/sinnara/main_note/images/message/btn_next.gif') no-repeat right top;">다음</a>
 						</span>
 					</div>
 					<table class="tbl_list notice_view tbl_message">
@@ -143,7 +126,7 @@
 					</table>
 					<div class="btn_area">
 						<div class="btnL">
-							<a href="send_message_list.jsp?page=send" class="common_btn"><span>쪽지 목록</span></a> 
+							<a href="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND" class="common_btn"><span>쪽지 목록</span></a> 
 						</div>
 						<div class="btnR">
 												
@@ -176,7 +159,7 @@
 		</script>
 	</c:if>
 	
-	<%@ include file="../inc/message_right.jsp"%>
+	<%@ include file="/sinnara/main_note/inc/message_right.jsp"%>
 <!-- wrap end -->
 <!-- footer -->
 
@@ -185,55 +168,6 @@
 	<div class="footer_area"></div>
 </footer>
 
-<!-- member layer -->
-	<div class="layer" id="layer_members" style="position:absolute;">
-		<a href="#" class="close"><img src="/images/content/work/btn_close.gif" alt="close"></a>
-		<ul class="set">
-			<li id="layer_member_goyard"><a href="#" target="_blank">뜰 바로가기</a></li>
-			<li id="layer_member_memberinfo"><a href="#">회원정보</a></li>
-			<li id="friend_reg"><a href="#">이웃등록</a></li>
-			<li id="bad_friend_reg"><a href="#">불량이웃등록</a></li>
-			<li id="layer_member_messagesend"><a href="#">쪽지보내기</a></li>
-			<li id="layer_member_report"><a href="#">신고하기</a></li>
-		</ul>
-	</div>
-<script type="text/javascript">
-  //  ga not defined 수정 (epkim 16.02.19)
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48261815-1', 'joara.com');
-  ga('send', 'pageview');
-
-</script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-	// 세션 storage 사용 (ie8 이상)
-	if (window.sessionStorage) {
-		var ss_login_value = sessionStorage.getItem('jw_login_log');
-		if (ss_login_value != 'y') {
-			// makeLoginLog();
-			// 세션 storage 에 기록 남김
-			console.log('log: session');
-			sessionStorage.setItem('jw_login_log', 'y');
-		} // end if
-	}
-	// 세션 storage 미지원인 경우 cookie 사용
-	else {
-		var ck_login_value = getCookie('jw_login_log'); // func.js 사용
-		if (ck_login_value != 'y') {
-			// makeLoginLog();
-			// 쿠키에 기록 남김
-			console.log('log: cookie');
-			setCookie('jw_login_log', 'y'); // func.js 사용
-		} // end if
-	} // end of (window.sessionStorage)
-
-});
-</script>
 
 </body>
 </html>

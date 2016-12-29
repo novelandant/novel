@@ -11,21 +11,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<title>신나라 : 문화의 시작 - </title>
 	
-	<link rel="stylesheet" href="../bootstrap337/css/bootstrap.min.css"/>
-	<script src="../bootstrap337/js/jquery-3.1.1.min.js"></script>
-	<script src="../bootstrap337/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/main_note/bootstrap337/css/bootstrap.min.css"/>
+	<script src="/SinnaraPrj/sinnara/main_note/bootstrap337/js/jquery-3.1.1.min.js"></script>
+	<script src="/SinnaraPrj/sinnara/main_note/bootstrap337/js/bootstrap.min.js"></script>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="/fcon.ico">
-	<link rel="stylesheet" type="text/css" href="../joara_css/base.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/base.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/content.css" media="all">
 							
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 	<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
-	<link rel="stylesheet" href="../joara_css/nyroModal.css" type="text/css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="../message_css/sinara_message.css" media="all">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/main_note/joara_css/nyroModal.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/message_css/sinara_message.css" media="all">
 	
 	<!-- JQueryUI관련... -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -47,7 +47,7 @@
 			});
 			
 			$("#note_receiveid").change(function(){
-				$.get("received_id_check.jsp", {sendID:$("#note_receiveid").val()}, 
+				$.get("/SinnaraPrj/sinnara/main_note/message/received_id_check.jsp", {sendID:$("#note_receiveid").val()}, 
 						function(data){
 							alert(data);
 					});
@@ -61,29 +61,26 @@
 	  <p>보낼 쪽지 내용을 입력 하세요.</p>
 	</div>
 
-	<jsp:useBean id="dao" class="prj.novel.note.NoteGetDao" />
-	
 	<div id="wrap">
-		<%@ include file="../inc/message_header.jsp"%>
+		<%@ include file="/sinnara/main_note/inc/message_header.jsp"%>
 	
 		<div id="container" class="clearfix">
-			<%@ include file="../inc/message_left.jsp"%>
+			<%@ include file="/sinnara/main_note/inc/message_left.jsp"%>
 
 			<div id="content">
 				<div class="title">
-				<h3><img src="../images/message/t_inbox_send.gif" alt="쪽지  보내기"></h3>
+				<h3><img src="/SinnaraPrj/sinnara/main_note/images/message/t_inbox_send.gif" alt="쪽지  보내기"></h3>
 				<div class="path">
 					홈 &gt; 쪽지 &gt; 
 					<select class="fe_select" onchange="location.href=this.value">
-						<option value="receive_message_list.jsp" >받은 쪽지함</option>
-						<option value="receive_message_list.jsp?page=send" >보낸 쪽지함</option>
-						<option value="receive_message_list.jsp?page=r_store" >받은 쪽지 보관함</option>
-						<option value="receive_message_list.jsp?page=s_store" >보낸 쪽지 보관함</option>
-						<option value="send_message.jsp" selected>쪽지 보내기</option>
+						<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE">받은 쪽지함</option>
+						<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND" selected>보낸 쪽지함</option>
+						<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=R_STORE">받은 쪽지 보관함</option>
+						<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=S_STORE">보낸 쪽지 보관함</option>
 					</select>
 				</div>
 			</div>
-			<form id="messageForm" method="post" action="send_message_proc.jsp">
+			<form id="messageForm" method="post" action="/SinnaraPrj/message?cmd=SEND_MESSAGE_PROC">
 				<input type="hidden" id="message_mode" name="message_mode" value="">
 				<input type="hidden" id="note_sendid" name="note_sendid" value="${loginID}">
 					
@@ -117,24 +114,12 @@
 		</div>
 	</div>
 	</div>
-	<%@ include file="../inc/message_right.jsp"%>
+	<%@ include file="/sinnara/main_note/inc/message_right.jsp"%>
 
 	<!-- wrap end -->
 
 	<!-- footer -->
 	<footer id="footer">
 	</footer>
-<!-- member layer -->
-	<div class="layer" id="layer_members" style="position:absolute;">
-		<a href="#" class="close"><img src="/images/content/work/btn_close.gif" alt="close"></a>
-		<ul class="set">
-			<li id="layer_member_goyard"><a href="#" target="_blank">뜰 바로가기</a></li>
-			<li id="layer_member_memberinfo"><a href="#">회원정보</a></li>
-			<li id="friend_reg"><a href="#">이웃등록</a></li>
-			<li id="bad_friend_reg"><a href="#">불량이웃등록</a></li>
-			<li id="layer_member_messagesend"><a href="#">쪽지보내기</a></li>
-			<li id="layer_member_report"><a href="#">신고하기</a></li>
-		</ul>
-	</div>
 </body>
 </html>

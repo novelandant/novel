@@ -112,9 +112,9 @@ select				{height:19px; border:1px solid #ccc; font-size:12px; font-family:"µ¸¿ò
 .squareBox			{border:1px solid #dadada;}
 
 /* Radius Box(Img) */
-.radiusBoxTop		{height:4px; background:url('../images/common/bg/bg_radiusBoxTop.gif') no-repeat left top;}
-.radiusBoxBody		{background:url('../images/common/bg/bg_radiusBoxBody.gif') repeat-y left top;}
-.radiusBoxBottom	{height:4px; background:url('../images/common/bg/bg_radiusBoxBottom.gif') no-repeat left top;}
+.radiusBoxTop		{height:4px; background:url('/sinnara/main_note/images/common/bg/bg_radiusBoxTop.gif') no-repeat left top;}
+.radiusBoxBody		{background:url('/sinnara/main_note/images/common/bg/bg_radiusBoxBody.gif') repeat-y left top;}
+.radiusBoxBottom	{height:4px; background:url('/sinnara/main_note/images/common/bg/bg_radiusBoxBottom.gif') no-repeat left top;}
 
 /* Title */
 h1,h2,h3,h4,h5,h6	{letter-spacing:-.1em;}

@@ -14,8 +14,8 @@
 	<title>신나라 : 문화의 시작 - </title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="/fcon.ico">
-	<link rel="stylesheet" type="text/css" href="../joara_css/base.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/base.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/content.css" media="all">
 							
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -25,8 +25,8 @@
 	<script type="text/javascript" src="https://s3-ap-northeast-1.amazonaws.com/joara-cdn/js/jq.nyroModal.custom.js"></script>
 	
 	<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
-	<link rel="stylesheet" href="../joara_css/nyroModal.css" type="text/css" media="screen" />
-	<link rel="stylesheet" type="text/css" href="../message_css/sinara_message.css" media="all">
+	<link rel="stylesheet" href="/SinnaraPrj/sinnara/main_note/joara_css/nyroModal.css" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/message_css/sinara_message.css" media="all">
 
 	<script type="text/javascript">
 		$(function() {
@@ -57,27 +57,8 @@
 </head>
 
 <body id="body_m" class="" >
-
-	<jsp:useBean id="dao" class="prj.novel.note.NoteGetDao" />
-	
-	<%
-		String loginUser = (String)session.getAttribute("loginID");
-		String pageGubun = (String)session.getAttribute("page_gubun");
-		if (pageGubun==null || pageGubun=="") {pageGubun="receive";}
-		
-		int num = Integer.parseInt(request.getParameter("msgNum"));
-		
-		NoteGetDto noteDto = dao.getNoteByGetNum(num, "read");
-		pageContext.setAttribute("noteDto", noteDto);
-
-		HashMap msgMap = new HashMap();
-		msgMap = dao.getPrevNextNum(loginUser, pageGubun, num);
-		
-		pageContext.setAttribute("msgMap", msgMap);
-	%>
-	
 	<div id="wrap">
-		<%@ include file="../inc/message_header.jsp"%>
+		<%@ include file="/sinnara/main_note/inc/message_header.jsp"%>
 	
 		<form id="messageViewForm" method="post" action="message_proc.jsp">
 			<input type="hidden" id="message_mode" name="message_mode" >
@@ -89,18 +70,18 @@
 		</form>
 	
 		<div id="container" class="clearfix">
-			<%@ include file="../inc/message_left.jsp"%>
+			<%@ include file="/sinnara/main_note/inc/message_left.jsp"%>
 			
 			<div id="content">
 				<div class="title">
-					<h3><img src="../images/message/t_inbox.gif" alt="받은 쪽지함"></h3>
+					<h3><img src="/SinnaraPrj/sinnara/main_note/images/message/t_inbox.gif" alt="받은 쪽지함"></h3>
 					<div class="path">
 						홈 &gt; 쪽지 &gt; 
 						<select class="fe_select" onchange="location.href=this.value">
-							<option value="receive_message_list.jsp?page=receive" selected>받은 쪽지함</option>
-							<option value="receive_message_list.jsp?page=send" >보낸 쪽지함</option>
-							<option value="receive_message_list.jsp?page=r_store" >받은 쪽지 보관함</option>
-							<option value="receive_message_list.jsp?page=s_store" >보낸 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE" selected>받은 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND">보낸 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=R_STORE">받은 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=S_STORE">보낸 쪽지 보관함</option>
 							<option value="send_message.html" >쪽지 보내기</option>
 						</select>
 					</div>
@@ -109,11 +90,11 @@
 					<div class="message_view_option">
 						<a href="#" id="btn_motion" class="btn_delete" mode="message_del" ><span>삭제</span></a> 
 						<a href="#" id="btn_motion" mode="message_store" class="btn_message" ><span>보관</span></a>
-						<a href="reply_message.jsp?msgNum=${noteDto.getNote_getnum()}" class="btn_message"><span>답장</span></a>
-						<a href="receive_message_list.jsp?page=receive" class="btn_view_list">목록</a>
+						<a href="/SinnaraPrj/message?cmd=REPLY_MESSAGE&msgNum=${noteDto.getNote_getnum()}" class="btn_message"><span>답장</span></a>
+						<a href="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE" class="btn_view_list">목록</a>
 						<span class="list_btn">
-							<a href="" class="prev" style="background:url('../images/message/btn_prev.gif') no-repeat left top;">이전</a>|
-							<a href="" class="next" style="background:url('../images/message/btn_next.gif') no-repeat right top;">다음</a>
+							<a href="" class="prev" style="background:url('/SinnaraPrj/sinnara/main_note/images/message/btn_prev.gif') no-repeat left top;">이전</a>|
+							<a href="" class="next" style="background:url('/SinnaraPrj/sinnara/main_note/images/message/btn_next.gif') no-repeat right top;">다음</a>
 						</span>
 					</div>
 					<table class="tbl_list notice_view tbl_message">
@@ -144,10 +125,10 @@
 					</table>
 					<div class="btn_area">
 						<div class="btnL">
-							<a href="receive_message_list.jsp?page=" class="common_btn"><span>쪽지 목록</span></a> 
+							<a href="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE" class="common_btn"><span>쪽지 목록</span></a> 
 						</div>
 						<div class="btnR">
-							<a href="reply_message.jsp?msgNum=${noteDto.getNote_getnum()}"  class="common_btn btn3"><span>답장</span></a>					
+							<a href="/SinnaraPrj/message?cmd=REPLY_MESSAGE&msgNum=${noteDto.getNote_getnum()}"  class="common_btn btn3"><span>답장</span></a>					
 						</div>
 					</div>
 				</section>
@@ -177,7 +158,7 @@
 		</script>
 	</c:if>
 	
-	<%@ include file="../inc/message_right.jsp"%>
+	<%@ include file="/sinnara/main_note/inc/message_right.jsp"%>
 <!-- wrap end -->
 <!-- footer -->
 

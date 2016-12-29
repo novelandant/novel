@@ -108,13 +108,13 @@ public class NoteGetDao {
 		String sql= "";
 
 		switch (pageGubun) {
-			case "receive":
+			case "RECEIVE":
 				sql = "select * from note_get where note_keepyn = 'N' and note_receiveid = ? order by note_regdate desc";
 				break;
-			case "r_store":
+			case "R_STORE":
 				sql = "select * from note_get where note_keepyn = 'Y' and note_receiveid = ? order by note_regdate desc";
 				break;
-			case "unread":
+			case "UNREAD":
 				sql = "select * from note_get where NOTE2_SENDNUM in "
 						+ "(select NOTE2_SENDNUM from NOTE2_SEND where NOTE2_GETIDENTIFY = 'N') and NOTE_RECEIVEID = ?";
 				break;
@@ -125,7 +125,7 @@ public class NoteGetDao {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, loginID);
 			rs = pstmt.executeQuery();
-			
+
 			while(rs.next()){
 				NoteGetDto dto = new NoteGetDto();
 				
@@ -162,7 +162,7 @@ public class NoteGetDao {
 			sql = "select * from note_get where note_getnum = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, getNum);
-
+			System.out.println("받은메세지번호:"+getNum);
 			rs = pstmt.executeQuery();
 
 			if(rs.next()){
@@ -356,7 +356,7 @@ public class NoteGetDao {
 		HashMap numIdx = new HashMap();
 		
 		switch (pageGubun) {
-			case "receive":
+			case "RECEIVE":
 				sql = "select * from ( " +
 						"SELECT note_getnum note_current, " +
 						"		lead(note_getnum, 1, 0) over(order by note_getnum) note_next, " +
@@ -365,7 +365,7 @@ public class NoteGetDao {
 						" where note_receiveid = ? and note_keepyn='N' ) " + 
 						"WHERE note_current = ?";
 				break;
-			case "r_store":
+			case "R_STORE":
 				sql = "select * from ( " +
 						"SELECT note_getnum note_current, " +
 						"		lead(note_getnum, 1, 0) over(order by note_getnum) note_next, " +

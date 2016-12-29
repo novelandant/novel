@@ -37,10 +37,10 @@ public class NoteSendDao {
 		String sql= "";
 
 		switch (pageGubun) {
-			case "send":
+			case "SEND":
 				sql = "select * from note2_send where note2_keepyn = 'N' and note2_sendid = ? order by note2_regdate desc";
 				break;
-			case "s_store":
+			case "S_STORE":
 				sql = "select * from note2_send where note2_keepyn = 'Y' and note2_sendid = ? order by note2_regdate desc";
 				break;
 		}

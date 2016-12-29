@@ -13,10 +13,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<title>신나라 : 문화의 시작 - </title>
 	
-	<link rel="stylesheet" type="text/css" href="../joara_css/base.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/content.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/nyroModal.css"  media="screen" />
-	<link rel="stylesheet" type="text/css" href="../message_css/sinara_message.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/base.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/nyroModal.css"  media="screen" />
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/message_css/sinara_message.css" media="all">
 							
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -95,23 +95,23 @@
 	<c:set var="page_gubun" value="${param.page}" scope="session"/>
 
 	<div id="wrap">
-		<%@ include file="../inc/message_header.jsp"%>
+		<%@ include file="/sinnara/main_note/inc/message_header.jsp"%>
 		
 		<div id="container" class="clearfix">
-			<%@ include file="../inc/message_left.jsp"%>
+			<%@ include file="/sinnara/main_note/inc/message_left.jsp"%>
 
 			<div id="content">
 				<div class="title">
 					<h3>
-						<img id="send_img" src="../images/message/t_send_message.gif" alt="보낸 쪽지함">
+						<img id="send_img" src="/SinnaraPrj/sinnara/main_note/images/message/t_send_message.gif" alt="보낸 쪽지함">
 					</h3>
 					<div class="path">홈 &gt; 쪽지 &gt; 
 						<select class="fe_select" onchange="location.href=this.value">
-							<option value="receive_message_list.jsp?page=receive" selected>받은 쪽지함</option>
-							<option value="send_message_list.jsp?page=send">보낸 쪽지함</option>
-							<option value="receive_message_list.jsp?page=r_store">받은 쪽지 보관함</option>
-							<option value="send_message_list.jsp?page=s_store">보낸 쪽지 보관함</option>
-							<option value="send_message.jsp">쪽지 보내기</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE">받은 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND" selected>보낸 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=R_STORE">받은 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=S_STORE">보낸 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE">쪽지 보내기</option>
 						</select>
 					</div>
 				</div>
@@ -120,7 +120,7 @@
 					<c:when test="${page_gubun=='send'}">
 						<script>
 							$(function(){
-								$("#send_img").attr("src", "../images/message/t_send_message.gif");
+								$("#send_img").attr("src", "/SinnaraPrj/sinnara/main_note/images/message/t_send_message.gif");
 								$(".fe_select option:eq(1)").attr("selected", "selected");
 							})
 						</script>
@@ -128,7 +128,7 @@
 					<c:when test="${page_gubun=='r_store'}">
 						<script>
 							$(function(){
-								$("#send_img").attr("src", "../images/message/t_message_box.gif");
+								$("#send_img").attr("src", "/SinnaraPrj/sinnara/main_note/images/message/t_message_box.gif");
 								$(".fe_select option:eq(2)").attr("selected", "selected");
 							})
 						</script>
@@ -136,27 +136,13 @@
 					<c:when test="${page_gubun=='s_store'}">
 						<script>
 							$(function(){
-								$("#send_img").attr("src", "../images/message/t_message_box.gif");
+								$("#send_img").attr("src", "/SinnaraPrj/sinnara/main_note/images/message/t_message_box.gif");
 								$(".fe_select option:eq(3)").attr("selected", "selected");
 							})
 						</script>
 					</c:when>
 				</c:choose>
 
-				<jsp:useBean id="dao" class="prj.novel.note.NoteSendDao" />
-		
-				<%
-					String pGubun = (String)session.getAttribute("page_gubun");
-					String loginUser = (String)session.getAttribute("loginID");
-					
-					ArrayList noteList = null;
-					
-					if (pGubun==null || pGubun=="") {pGubun="send";}
-					
-					noteList = dao.getNoteSendList(pGubun, loginUser);
-					pageContext.setAttribute("noteList", noteList);
-				%>
-	
 				<form id="messageListForm" method="post" action="receive_message_list_proc.jsp">
 					<input type="hidden" id="message_type" name="message_type" value="SEND">
 					<input type="hidden" id="message_gubun" name="message_gubun" value="SEND">
@@ -175,7 +161,7 @@
 						<div class="tbl_sub_bar">
 							<a href="#" id="btn_motion" class="btn_delete" mode="message_del"><span>삭제</span></a>
 							<a href="#" id="btn_motion" class="btn_message"	mode="message_store"><span>보관</span></a> 
-							<a href="send_message.jsp" class="btn_r btn_message"><span>쪽지	쓰기</span></a>
+							<a href="/SinnaraPrj/message?cmd=SEND_MESSAGE" class="btn_r btn_message"><span>쪽지	쓰기</span></a>
 						</div>
 
 						<table class="table_stats mb30">
@@ -202,7 +188,9 @@
 										name="message_idx" id="message_idx" value="${sendNote.getNote2_sendnum()}"
 										rev_id="${sendNote.getNote2_receiveid()}"></td>
 									<td class="cen">${sendNote.getNote2_receiveid()}</td>
-									<td class="left"><a	href="view_send_message.jsp?msgNum=${sendNote.getNote2_sendnum()}">${sendNote.getNote2_subject()}</a></td>
+									<td class="left">
+										<a	href="/SinnaraPrj/message?cmd=VIEW_SEND_MESSAGE&page=SEND&msgNum=${sendNote.getNote2_sendnum()}">${sendNote.getNote2_subject()}</a>
+									</td>
 									<td class="cen">${sendNote.getNote2_regdate()}</td>
 									<td class="cen">${sendNote.getNote2_getidentify()}</td></td>
 								</tr>
@@ -219,7 +207,7 @@
 		</div>
 		<!-- container -->	
 
-		<%@ include file="../inc/message_right.jsp"%>
+		<%@ include file="/sinnara/main_note/inc/message_right.jsp"%>
 	</div>
 
 <!-- wrap end -->

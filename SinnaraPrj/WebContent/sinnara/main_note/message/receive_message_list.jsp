@@ -12,10 +12,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<title>신나라 : 문화의 시작 - </title>
 	
-	<link rel="stylesheet" type="text/css" href="../joara_css/base.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/content.css" media="all">
-	<link rel="stylesheet" type="text/css" href="../joara_css/nyroModal.css"  media="screen" />
-	<link rel="stylesheet" type="text/css" href="../message_css/sinara_message.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/base.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/content.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/joara_css/nyroModal.css"  media="screen" />
+	<link rel="stylesheet" type="text/css" href="/SinnaraPrj/sinnara/main_note/message_css/sinara_message.css" media="all">
 							
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -77,7 +77,7 @@
 						return false;
 					}else{
 						var rev_id=$('input:checkbox[id="message_idx"]').val();
-						location.href="/SinnaraPrj/sinnara/main_note/message/reply_message.jsp?msgNum=" + rev_id;
+						location.href="/SinnaraPrj/message?cmd=REPLY_MESSAGE&msgNum=" + rev_id;
 					}
 				} else {
 					alert("선택된 쪽지가 없습니다.");
@@ -107,23 +107,23 @@
 	<c:set var="page_gubun" value="${param.page}" scope="session"/>
 
 	<div id="wrap">
-		<%@ include file="../inc/message_header.jsp"%>
+		<%@ include file="/sinnara/main_note/inc/message_header.jsp"%>
 		
 		<div id="container" class="clearfix">
-			<%@ include file="../inc/message_left.jsp"%>
+			<%@ include file="/sinnara/main_note/inc/message_left.jsp"%>
 
 			<div id="content">
 				<div class="title">
 					<h3>
-						<img id="receive_img" src="../images/message/t_inbox.gif" alt="받은 쪽지함">
+						<img id="receive_img" src="/SinnaraPrj/sinnara/main_note/images/message/t_inbox.gif" alt="받은 쪽지함">
 					</h3>
 					<div class="path">홈 &gt; 쪽지 &gt; 
 						<select class="fe_select" onchange="location.href=this.value">
-							<option value="receive_message_list.jsp?page=receive" selected>받은 쪽지함</option>
-							<option value="send_message_list.jsp?page=send">보낸 쪽지함</option>
-							<option value="receive_message_list.jsp?page=r_store">받은 쪽지 보관함</option>
-							<option value="send_message_list.jsp?page=s_store">보낸 쪽지 보관함</option>
-							<option value="send_message.jsp">쪽지 보내기</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE" selected>받은 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND">보낸 쪽지함</option>
+							<option value="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=R_STORE">받은 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=S_STORE">보낸 쪽지 보관함</option>
+							<option value="/SinnaraPrj/message?cmd=SEND_MESSAGE">쪽지 보내기</option>
 						</select>
 					</div>
 				</div>
@@ -132,7 +132,7 @@
 					<c:when test="${page_gubun=='send'}">
 						<script>
 							$(function(){
-								$("#receive_img").attr("src", "../images/message/t_send_message.gif");
+								$("#receive_img").attr("src", "/SinnaraPrj/sinnara/main_note/images/message/t_send_message.gif");
 								$(".fe_select option:eq(1)").attr("selected", "selected");
 							})
 						</script>
@@ -140,7 +140,7 @@
 					<c:when test="${page_gubun=='r_store'}">
 						<script>
 							$(function(){
-								$("#receive_img").attr("src", "../images/message/t_message_box.gif");
+								$("#receive_img").attr("src", "/SinnaraPrj/sinnara/main_note/images/message/t_message_box.gif");
 								$(".fe_select option:eq(2)").attr("selected", "selected");
 							})
 						</script>
@@ -148,29 +148,13 @@
 					<c:when test="${page_gubun=='s_store'}">
 						<script>
 							$(function(){
-								$("#receive_img").attr("src", "../images/message/t_message_box.gif");
+								$("#receive_img").attr("src", "/SinnaraPrj/sinnara/main_note/images/message/t_message_box.gif");
 								$(".fe_select option:eq(3)").attr("selected", "selected");
 							})
 						</script>
 					</c:when>
 				</c:choose>
 
-				<jsp:useBean id="dao" class="prj.novel.note.NoteGetDao" />
-		
-				<%
-					String pGubun = (String)session.getAttribute("page_gubun");
-					String loginUser = (String)session.getAttribute("loginID");
-					
-					if (loginUser==null || loginUser=="") {response.sendRedirect("/SinnaraPrj/sinnara/index.jsp");}
-					
-					ArrayList noteList = null;
-					
-					if (pGubun==null || pGubun=="") {pGubun="receive";}
-					
-					noteList = dao.getNoteList(pGubun, loginUser);
-					pageContext.setAttribute("noteList", noteList);
-				%>
-	
 				<form id="messageListForm" method="post" action="receive_message_list_proc.jsp">
 					<input type="hidden" id="message_type" name="message_type" value="RECEIVED">
 					<input type="hidden" id="message_gubun" name="message_gubun" value="RECEIVED">
@@ -182,7 +166,7 @@
 							<div class="in_box">
 								<ul class="list">
 									<li id="unreadLabel"><strong>읽지 않은 쪽지 : <span id="unreadNote">0</span></strong> 개</li>
-									<li class="last"><strong>전체 쪽지 : <span>${noteList.size()}</span></strong> 개</li>
+									<li class="last"><strong>전체 쪽지 : <span>${ReceiveNoteList.size()}</span></strong> 개</li>
 								</ul>
 							</div>
 						</div>
@@ -205,8 +189,8 @@
 							<a href="#" id="btn_motion" class="btn_delete" mode="message_del"><span>삭제</span></a>
 							<a href="#" id="btn_motion" class="btn_message"	mode="message_store"><span>보관</span></a> 
 							<a href="#"	id="btn_reply" class="btn_message"><span>답장</span></a> 
-							<a href="receive_message_list.jsp?page=unread&view=not" class="no_read">읽지 않은 쪽지</a>
-							<a href="send_message.jsp" class="btn_r btn_message"><span>쪽지	쓰기</span></a>
+							<a href="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=UNREAD&view=not" class="no_read">읽지 않은 쪽지</a>
+							<a href="/SinnaraPrj/message?cmd=SEND_MESSAGE" class="btn_r btn_message"><span>쪽지	쓰기</span></a>
 						</div>
 
 						<table class="table_stats mb30">
@@ -227,13 +211,15 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${noteList}" var="receiveNote">
+								<c:forEach items="${ReceiveNoteList}" var="receiveNote">
 									<tr> 
 										<td class="cen"><input type="checkbox"
 											name="message_idx" id="message_idx" value="${receiveNote.getNote_getnum()}"
 											rev_id="${receiveNote.getNote_sendid()}"></td>
 										<td class="cen">${receiveNote.getNote_sendid()}</td>
-										<td class="left"><a	href="view_message.jsp?msgNum=${receiveNote.getNote_getnum()}">${receiveNote.getNote_subject()}</a></td>
+										<td class="left">
+											<a	href="/SinnaraPrj/message?cmd=VIEW_MESSAGE&page=RECEIVE&msgNum=${receiveNote.getNote_getnum()}">${receiveNote.getNote_subject()}</a>
+										</td>
 										<td class="cen">${receiveNote.getNote_regdate()}</td>
 										<td class="cen"><a href="#"
 											class="nyroModal">차단 <span class="line">|</span> 신고 </a></td>
@@ -253,7 +239,7 @@
 
 	</div>
 	
-	<%@ include file="../inc/message_right.jsp"%>
+	<%@ include file="/sinnara/main_note/inc/message_right.jsp"%>
 <!-- wrap end -->
 <!-- footer -->
 	

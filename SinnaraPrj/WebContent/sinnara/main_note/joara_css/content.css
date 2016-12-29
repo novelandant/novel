@@ -45,8 +45,8 @@ a.btn_side4 span {display:inline-block; width:57px;}
 /*  common button */
 .btn_area {position:relative; text-align:right;}
 .btn_area.mb90 {margin-bottom:90px;}
-.common_btn {display:inline-block; height:29px; padding-right:22px; background:url('../images/common/bg_common_btn.gif') no-repeat right top;}
-.common_btn span {display:inline-block; height:29px; padding-left:22px; background:url('../images/common/bg_common_btn.gif') no-repeat left top; line-height:29px; font-weight:bold; color:#555; cursor:pointer;}
+.common_btn {display:inline-block; height:29px; padding-right:22px; background:url('/SinnaraPrj/sinnara/main_note/images/common/bg_common_btn.gif') no-repeat right top;}
+.common_btn span {display:inline-block; height:29px; padding-left:22px; background:url('/SinnaraPrj/sinnara/main_note/images/common/bg_common_btn.gif') no-repeat left top; line-height:29px; font-weight:bold; color:#555; cursor:pointer;}
 a:hover.common_btn {text-decoration:none;}
 .common_btn.btn2 {background-position:right -29px;}
 .common_btn.btn2 span {background-position:left -29px;}
@@ -2229,10 +2229,10 @@ body.guide2 {min-width:1045px; background:#b8b1a5 url('/images/content/guide/bg_
 .message_box_area a.no_read {position:relative; top:4px; vertical-align:top; font-size:11px; color:#666;}
 .message_box_area a.btn_view_list {position:relative; top:5px; margin:0 20px 0 5px; vertical-align:top; font-size:11px; color:#666;}
 
-.message_box_area .btn_message {display:inline-block; height:22px; padding-left:8px; background:url('../images/message/bg_message_btn.gif') no-repeat left top;}
-.message_box_area .btn_message span {display:inline-block; height:22px; padding-right:8px; background:url('../images/message/bg_message_btn.gif') no-repeat right top; line-height:24px; vertical-align:top; font-size:12px; color:#333;}
-.message_box_area .btn_delete {display:inline-block; height:22px; padding-left:18px; background:url('../images/message/bg_delete_btn.gif') no-repeat left top;}
-.message_box_area .btn_delete span {display:inline-block; height:22px; padding-right:8px; background:url('../images/message/bg_delete_btn.gif') no-repeat right top; line-height:24px; vertical-align:top; font-size:12px; color:#333;}
+.message_box_area .btn_message {display:inline-block; height:22px; padding-left:8px; background:url('/sinnara/main_note/images/message/bg_message_btn.gif') no-repeat left top;}
+.message_box_area .btn_message span {display:inline-block; height:22px; padding-right:8px; background:url('/sinnara/main_note/images/message/bg_message_btn.gif') no-repeat right top; line-height:24px; vertical-align:top; font-size:12px; color:#333;}
+.message_box_area .btn_delete {display:inline-block; height:22px; padding-left:18px; background:url('/sinnara/main_note/images/message/bg_delete_btn.gif') no-repeat left top;}
+.message_box_area .btn_delete span {display:inline-block; height:22px; padding-right:8px; background:url('/sinnara/main_note/images/message/bg_delete_btn.gif') no-repeat right top; line-height:24px; vertical-align:top; font-size:12px; color:#333;}
 .message_box_area .table_stats .line {display:inline-block; color:#aaa;}
 .message_box_area .table_stats td.left a {display:inline-block; width:320px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 
