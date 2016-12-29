@@ -61,7 +61,7 @@
 						<ul class="topbar-list topbar-menu">
 							<li><a href="#">SINNARA</a></li>
 							<li><a href="#">Contact</a></li>
-							<li><a href="/SinnaraPrj/sinnara/main_note/message/receive_message_list.jsp?page=receive">쪽지</a></li>
+							<li><a href="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_LIST&page=RECEIVE">쪽지</a></li>
                             <li><a href="https://youtu.be/zLN0aacAmQs">김진국</a></li>
                             <li><a href="http://www.sarang.org ">김재환</a></li>
                             <li><a href="http://cafe.daum.net/SoulDressercafe">정성혜</a></li>
