@@ -77,8 +77,8 @@
 						alert('답장은 1:1로 가능합니다. 하나의 쪽지만 선택해 주세요');
 						return false;
 					}else{
-						var rev_id=$('input:checkbox[name="message_idx"]:checked').attr('rev_id');
-						location.href="reply_message.jsp?page="+$("#page").val()+"&rev_id="+rev_id;
+						var rev_id=$('input:checkbox[id="message_idx"]').val();
+						location.href="/SinnaraPrj/message?cmd=REPLY_MESSAGE&msgNum=" + rev_id;
 					}
 				} else {
 					alert("선택된 쪽지가 없습니다.");
@@ -143,7 +143,7 @@
 					</c:when>
 				</c:choose>
 
-				<form id="messageListForm" method="post" action="receive_message_list_proc.jsp">
+				<form id="messageListForm" method="post" action="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_PROC">
 					<input type="hidden" id="message_type" name="message_type" value="SEND">
 					<input type="hidden" id="message_gubun" name="message_gubun" value="SEND">
 					<input type="hidden" id="message_mode" name="message_mode">

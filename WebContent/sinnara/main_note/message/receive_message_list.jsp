@@ -155,7 +155,7 @@
 					</c:when>
 				</c:choose>
 
-				<form id="messageListForm" method="post" action="receive_message_list_proc.jsp">
+				<form id="messageListForm" method="post" action="/SinnaraPrj/message?cmd=RECEIVE_MESSAGE_PROC">
 					<input type="hidden" id="message_type" name="message_type" value="RECEIVED">
 					<input type="hidden" id="message_gubun" name="message_gubun" value="RECEIVED">
 					<input type="hidden" id="message_mode" name="message_mode">

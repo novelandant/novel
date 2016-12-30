@@ -24,6 +24,11 @@ public class NoteFactoryCommand {
 				return new SendProcCommand();
 			case "SEND_MESSAGE":
 				return new SendCommand();
+			case "RECEIVE_MESSAGE_PROC" :
+				return new ReceiveListProcCommand();
+			case "MESSAGE_PROC" :
+				return new MessageProcCommand();
+
 			default:
 				return null;
 		}

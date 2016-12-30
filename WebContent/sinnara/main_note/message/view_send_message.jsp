@@ -61,7 +61,7 @@
 	<div id="wrap">
 		<%@ include file="/sinnara/main_note/inc/message_header.jsp"%>
 	
-		<form id="messageViewForm" method="post" action="message_proc.jsp">
+		<form id="messageViewForm" method="post" action="/SinnaraPrj/message?cmd=MESSAGE_PROC">
 			<input type="hidden" id="message_mode" name="message_mode" >
 			<input type="hidden" id="message_gubun" name="message_gubun" value="SEND">
 			<input type="hidden" id="message_num" name="message_num" value="${noteDto.getNote2_sendnum()}">
@@ -92,7 +92,7 @@
 						<a href="#" id="btn_motion" class="btn_delete" mode="message_del" ><span>삭제</span></a> 
 						<a href="#" id="btn_motion" mode="message_store" class="btn_message" ><span>보관</span></a>
 
-						<a href="send_message_list.jsp?page=send" class="btn_view_list">목록</a>
+						<a href="/SinnaraPrj/message?cmd=SEND_MESSAGE_LIST&page=SEND" class="btn_view_list">목록</a>
 						<span class="list_btn">
 							<a href="" class="prev" style="background:url('/SinnaraPrj/sinnara/main_note/images/message/btn_prev.gif') no-repeat left top;">이전</a>|
 							<a href="" class="next" style="background:url('/SinnaraPrj/sinnara/main_note/images/message/btn_next.gif') no-repeat right top;">다음</a>
@@ -140,7 +140,7 @@
 
 	<c:if test="${msgMap.PREV>0}">
 		<script>
-			$(function(){$(".prev").attr("href", "view_send_message.jsp?msgNum=${msgMap.PREV}")});
+			$(function(){$(".prev").attr("href", "/SinnaraPrj/message?cmd=VIEW_SEND_MESSAGE&page=SEND&msgNum=${msgMap.PREV}")});
 		</script>
 	</c:if>
 	<c:if test="${msgMap.PREV==0}">
@@ -150,7 +150,7 @@
 	</c:if>
 	<c:if test="${msgMap.NEXT>0}">
 		<script>
-			$(function(){$(".next").attr("href", "view_send_message.jsp?msgNum=${msgMap.NEXT}")});
+			$(function(){$(".next").attr("href", "/SinnaraPrj/message?cmd=VIEW_SEND_MESSAGE&page=SEND&msgNum=${msgMap.NEXT}")});
 		</script>
 	</c:if>
 	<c:if test="${msgMap.NEXT==0}">
