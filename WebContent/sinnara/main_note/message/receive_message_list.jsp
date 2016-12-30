@@ -103,7 +103,7 @@
 </head>
 
 <body id="body_m" class="" >
-	<c:set var="loginID" value="testid1" scope="session" />
+	<!--<c:set var="loginID" value="testid1" scope="session" />-->
 	<c:set var="page_gubun" value="${param.page}" scope="session"/>
 
 	<div id="wrap">
