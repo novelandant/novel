@@ -102,12 +102,14 @@
 							%>
 							<li class="cd-log_reg home"><a class="cd-signin" href="/SinnaraPrj/sinnara/main_loginInput/login.jsp">로그인</a></li>
 							<li class="cd-log_reg"><a class="cd-signup" href="/SinnaraPrj/sinnara/main_registMember/member.jsp">회원가입</a></li>
+							
 							<%
 								}
 							else{
 							%>
 							<li class="cd-log_reg home"><a class="cd-signin" href="/SinnaraPrj/sinnara/logout.jsp">로그아웃</a></li>
 							<li class="cd-log_reg"><a class="cd-signup" href="/SinnaraPrj/sinnara/main_registMember/mypage.jsp">마이페이지</a></li>
+							<li><%=loginID%>님 환영합니다.</li>
 							<%
 							}
 							%>

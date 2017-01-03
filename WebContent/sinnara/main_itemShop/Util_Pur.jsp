@@ -38,6 +38,8 @@
 				<div class="tab-content">
 					<div class="tab-pane active" id="tab1">
 					<form method="post" action="Util_Pur_Proc.jsp">
+					
+					<input type="hidden" name="member_id" value="<%=session.getAttribute("loginID")%>">
 					<h4><img src="http://www.joara.com/images/content/itemshop/t_utilize_select.gif" alt="이용권 선택"></h4>
 					
 						<br><br><br>

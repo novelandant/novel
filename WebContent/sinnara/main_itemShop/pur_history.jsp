@@ -23,7 +23,8 @@
 		//String pur_num=request.getParameter("pur_num");
 		
 		request.setCharacterEncoding("euc-kr");
-		ArrayList list = (ArrayList)dao.getUtilList();
+		String id = (String)session.getAttribute("loginID");
+		ArrayList list = (ArrayList)dao.getUtilList(id);
 	%>
 	<center>
 		<div class="container">

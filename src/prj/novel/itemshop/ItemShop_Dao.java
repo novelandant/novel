@@ -67,11 +67,46 @@ public class ItemShop_Dao {
 		return list;
 	}
 	
+	public ArrayList getUtilList(String id){
+		ArrayList list = new ArrayList();
+		
+		
+		String sql = null;
+		
+		sql = "select * from pur_history where member_id = ?";
+		
+		try{
+			con = ds.getConnection();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				ItemShop_Dto dto = new ItemShop_Dto();
+				dto.setPur_date(rs.getString("pur_date"));
+				dto.setPur_way(rs.getString("pur_way"));
+				dto.setSum(rs.getInt("sum"));
+				dto.setUtil_kind(rs.getString("util_kind"));
+				
+				
+				// pur_history.jsp에게 보냄.
+				list.add(dto);
+			}
+		}
+		catch(Exception err){
+			System.out.println("getUtilList() : " + err);
+		}
+		finally{
+			freeConnection();
+		}
+		return list;
+	}
+	
 
 	public void insertPur_History(String history[], ItemShop_Dto dto){
 		// insert into 테이블명 (컬럼명 ...) values(값);
-		String sql = "insert into pur_history(pur_date,pur_way,sum,util_kind)"
-				+ "values(now(),?,?,?)";
+		String sql = "insert into pur_history(member_id,pur_date,pur_way,sum,util_kind)"
+				+ "values(?,now(),?,?,?)";
 		
 
 		try{
@@ -82,9 +117,10 @@ public class ItemShop_Dao {
 			// DB에 값 넣기
 			pstmt = con.prepareStatement(sql);
 			//pstmt.setInt(1, dto.getSum());
-			pstmt.setString(1, dto.getPur_way());
-			pstmt.setString(2, history[1]);
-			pstmt.setString(3, history[0]);
+			pstmt.setString(1, dto.getMember_id());
+			pstmt.setString(2, dto.getPur_way());
+			pstmt.setString(3, history[1]);
+			pstmt.setString(4, history[0]);
 			
 		
 			
