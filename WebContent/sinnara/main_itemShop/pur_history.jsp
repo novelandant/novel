@@ -15,6 +15,12 @@
 
 <script src="/Test/sinnara/assets/js/jquery-3.1.1.min.js"></script>
 <script src="/Test/sinnara/assets/js/bootstrap.min.js"></script>
+
+<script>
+	$("a[id=btn_search]").click(function(){
+		
+	});
+</script>
 </head>
 <body>
 	<jsp:useBean id="dao" class="prj.novel.itemshop.ItemShop_Dao" scope="request"/>
@@ -164,7 +170,7 @@
 								<option value='30'>30 일</option>
 								<option value='31'>31 일</option>
 							</select> <a href="#" id="btn_search"><img
-								src="http://www.joara.com/images/common/btn/btn_srch2.gif" alt="검색"></a>
+								src="http://www.joara.com/images/common/btn/btn_srch2.gif" value="검색"></a>
 					</form>
 					</div>
 					
