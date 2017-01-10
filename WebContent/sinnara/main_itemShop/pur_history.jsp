@@ -30,7 +30,7 @@ $( function(){
 			var after_d = $("#e_day option:selected").val();
 			var after = after_y+"-"+after_m+"-"+after_d;
 			
-			location.href=""
+			location.href="pur_history.jsp?cmd1="+before+"&cmd2="+after;
 			alert(before +"에서 부서 " + after + "까지의 내역");
 	});
 });
@@ -45,7 +45,9 @@ $( function(){
 		
 		request.setCharacterEncoding("euc-kr");
 		String id = (String)session.getAttribute("loginID");
-		ArrayList list = (ArrayList)dao.getUtilList(id);
+		String before = request.getParameter("cmd1");
+		String after = request.getParameter("cmd2");
+		ArrayList list = (ArrayList)dao.getUtilList(id , before, after);
 	%>
 	<center>
 		<div class="container">
@@ -135,7 +137,8 @@ $( function(){
 								<option value='2013'>2013년</option>
 								<option value='2014'>2014년</option>
 								<option value='2015'>2015년</option>
-								<option value='2016' selected>2016년</option>
+								<option value='2016'>2016년</option>
+								<option value='2017' selected>2017년</option>
 							</select> <select id="e_month" name="e_month" class="fe_select">
 								<option value='-1'>선택</option>
 								<option value='1'>1 월</option>

@@ -1,3 +1,4 @@
+<%@page import="java.awt.List"%>
 <%@ page contentType="text/html; charset=EUC-KR"%>
 <%
 	request.setCharacterEncoding("euc-kr");
@@ -13,10 +14,13 @@ param 값이 property와 다를 때는 반드시 명시!!
 -->
 
 <%
+
+	
 	String pur_history = request.getParameter("pur_history");
 	String history[] = pur_history.split(",");
 	
 	dao.insertPur_History(history, dto);
+	
 	//넘어갈 페이지와 파라미터 값 전달(아래 코드와 같은 의미)
 	//response.sendRedirect("pur_history.jsp?pur_num="+dto.getPur_num());
 %>

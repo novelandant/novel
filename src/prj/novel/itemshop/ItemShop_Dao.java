@@ -9,6 +9,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import org.apache.catalina.connector.Request;
+
 public class ItemShop_Dao {
 	private Connection con;
 	private PreparedStatement pstmt;
@@ -32,54 +34,30 @@ public class ItemShop_Dao {
 	}
 	
 	
-	public ArrayList getUtilList(){
+
+	public ArrayList getUtilList(String id , String before, String after){
 		ArrayList list = new ArrayList();
 		
-
+		
 		String sql = null;
 		
-		sql = "select * from pur_history";
-
+		if (before==null||after==null) {			
+			sql = "select * from pur_history where member_id = ?";
+		}else{			
+			sql = "SELECT * FROM pur_history where member_id = ? and pur_date between ? and ? ";	
+		}
+		
 		try{
 			con = ds.getConnection();
 			pstmt = con.prepareStatement(sql);
-			
-			rs = pstmt.executeQuery();
-
-			while(rs.next()){
-				ItemShop_Dto dto = new ItemShop_Dto();
-				dto.setPur_date(rs.getString("pur_date"));
-				dto.setPur_way(rs.getString("pur_way"));
-				dto.setSum(rs.getInt("sum"));
-				dto.setUtil_kind(rs.getString("util_kind"));
-				
-				
-				// pur_history.jsp¿¡°Ô º¸³¿.
-				list.add(dto);
+			if (before==null||after==null) {
+				pstmt.setString(1, id);
+				rs = pstmt.executeQuery();				
+			}else{
+				pstmt.setString(1, id);
+				pstmt.setString(2, before);
+				pstmt.setString(3, after);
 			}
-		}
-		catch(Exception err){
-			System.out.println("getUtilList() : " + err);
-		}
-		finally{
-			freeConnection();
-		}
-		return list;
-	}
-	
-	public ArrayList getUtilList(String id){
-		ArrayList list = new ArrayList();
-		
-		
-		String sql = null;
-		
-		sql = "select * from pur_history where member_id = ?";
-		
-		try{
-			con = ds.getConnection();
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, id);
-			rs = pstmt.executeQuery();
 			
 			while(rs.next()){
 				ItemShop_Dto dto = new ItemShop_Dto();
@@ -92,8 +70,7 @@ public class ItemShop_Dao {
 				// pur_history.jsp¿¡°Ô º¸³¿.
 				list.add(dto);
 			}
-		}
-		catch(Exception err){
+		}catch(Exception err){
 			System.out.println("getUtilList() : " + err);
 		}
 		finally{
@@ -108,6 +85,7 @@ public class ItemShop_Dao {
 		String sql = "insert into pur_history(member_id,pur_date,pur_way,sum,util_kind)"
 				+ "values(?,now(),?,?,?)";
 		
+		 
 
 		try{
 			// DB ¿¬°á
@@ -135,5 +113,7 @@ public class ItemShop_Dao {
 			freeConnection();
 		}
 	}
+	
+
 	
 }
