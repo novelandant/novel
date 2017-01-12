@@ -30,8 +30,7 @@ $( function(){
 			var after_d = $("#e_day option:selected").val();
 			var after = after_y+"-"+after_m+"-"+after_d;
 			
-			location.href="pur_history.jsp?cmd1="+before+"&cmd2="+after;
-			alert(before +"俊辑 何辑 " + after + "鳖瘤狼 郴开");
+			location.href="pur_history.jsp?to="+before+"&from="+after;
 	});
 });
 	
@@ -45,9 +44,10 @@ $( function(){
 		
 		request.setCharacterEncoding("euc-kr");
 		String id = (String)session.getAttribute("loginID");
-		String before = request.getParameter("cmd1");
-		String after = request.getParameter("cmd2");
-		ArrayList list = (ArrayList)dao.getUtilList(id , before, after);
+		String to = request.getParameter("to");
+		String from = request.getParameter("from");
+		
+		ArrayList list = (ArrayList)dao.getUtilList(id , to, from);
 	%>
 	<center>
 		<div class="container">
@@ -72,65 +72,7 @@ $( function(){
 							<input type="hidden" name="mode" value="" /> <input
 								type="hidden" name="old" value="" /> 
 								<select id="s_year" name="s_year" class="fe_select">
-								<option value=-1>斥</option>
-								<option value='2010'>2010斥</option>
-								<option value='2011'>2011斥</option>
-								<option value='2012'>2012斥</option>
-								<option value='2013'>2013斥</option>
-								<option value='2014'>2014斥</option>
-								<option value='2015'>2015斥</option>
-								<option value='2016' selected>2016斥</option>
-
-							</select> <select id="s_month" name="s_month" class="fe_select">
-								<option value='-1'>急琶</option>
-								<option value='1'>1 岿</option>
-								<option value='2'>2 岿</option>
-								<option value='3'>3 岿</option>
-								<option value='4'>4 岿</option>
-								<option value='5'>5 岿</option>
-								<option value='6'>6 岿</option>
-								<option value='7'>7 岿</option>
-								<option value='8'>8 岿</option>
-								<option value='9'>9 岿</option>
-								<option value='10'>10 岿</option>
-								<option value='11' selected>11 岿</option>
-								<option value='12'>12 岿</option>
-
-							</select> <select id="s_day" name="s_day" class="fe_select">
-								<option value='-1'>急琶</option>
-								<option value='1'>1 老</option>
-								<option value='2'>2 老</option>
-								<option value='3'>3 老</option>
-								<option value='4'>4 老</option>
-								<option value='5'>5 老</option>
-								<option value='6'>6 老</option>
-								<option value='7'>7 老</option>
-								<option value='8'>8 老</option>
-								<option value='9'>9 老</option>
-								<option value='10'>10 老</option>
-								<option value='11'>11 老</option>
-								<option value='12'>12 老</option>
-								<option value='13'>13 老</option>
-								<option value='14'>14 老</option>
-								<option value='15'>15 老</option>
-								<option value='16'>16 老</option>
-								<option value='17'>17 老</option>
-								<option value='18'>18 老</option>
-								<option value='19'>19 老</option>
-								<option value='20'>20 老</option>
-								<option value='21'>21 老</option>
-								<option value='22'>22 老</option>
-								<option value='23'>23 老</option>
-								<option value='24'>24 老</option>
-								<option value='25'>25 老</option>
-								<option value='26'>26 老</option>
-								<option value='27' selected>27 老</option>
-								<option value='28'>28 老</option>
-								<option value='29'>29 老</option>
-								<option value='30'>30 老</option>
-								<option value='31'>31 老</option>
-							</select> ~ <select id="e_year" name="e_year" class="fe_select">
-								<option value=-1>斥</option>
+								<option value=-1 selected>斥档</option>
 								<option value='2010'>2010斥</option>
 								<option value='2011'>2011斥</option>
 								<option value='2012'>2012斥</option>
@@ -138,9 +80,10 @@ $( function(){
 								<option value='2014'>2014斥</option>
 								<option value='2015'>2015斥</option>
 								<option value='2016'>2016斥</option>
-								<option value='2017' selected>2017斥</option>
-							</select> <select id="e_month" name="e_month" class="fe_select">
-								<option value='-1'>急琶</option>
+								<option value='2017'>2017斥</option>
+
+							</select> <select id="s_month" name="s_month" class="fe_select">
+								<option value='-1' selected>岿</option>
 								<option value='1'>1 岿</option>
 								<option value='2'>2 岿</option>
 								<option value='3'>3 岿</option>
@@ -152,10 +95,10 @@ $( function(){
 								<option value='9'>9 岿</option>
 								<option value='10'>10 岿</option>
 								<option value='11'>11 岿</option>
-								<option value='12' selected>12 岿</option>
+								<option value='12'>12 岿</option>
 
-							</select> <select id="e_day" name="e_day" class="fe_select">
-								<option value='-1'>急琶</option>
+							</select> <select id="s_day" name="s_day" class="fe_select">
+								<option value='-1' selected>老</option>
 								<option value='1'>1 老</option>
 								<option value='2'>2 老</option>
 								<option value='3'>3 老</option>
@@ -182,7 +125,65 @@ $( function(){
 								<option value='24'>24 老</option>
 								<option value='25'>25 老</option>
 								<option value='26'>26 老</option>
-								<option value='27' selected>27 老</option>
+								<option value='27'>27 老</option>
+								<option value='28'>28 老</option>
+								<option value='29'>29 老</option>
+								<option value='30'>30 老</option>
+								<option value='31'>31 老</option>
+							</select> ~ <select id="e_year" name="e_year" class="fe_select">
+								<option value=-1 selected>斥档</option>
+								<option value='2010'>2010斥</option>
+								<option value='2011'>2011斥</option>
+								<option value='2012'>2012斥</option>
+								<option value='2013'>2013斥</option>
+								<option value='2014'>2014斥</option>
+								<option value='2015'>2015斥</option>
+								<option value='2016'>2016斥</option>
+								<option value='2017'>2017斥</option>
+							</select> <select id="e_month" name="e_month" class="fe_select">
+								<option value='-1' selected>岿</option>
+								<option value='1'>1 岿</option>
+								<option value='2'>2 岿</option>
+								<option value='3'>3 岿</option>
+								<option value='4'>4 岿</option>
+								<option value='5'>5 岿</option>
+								<option value='6'>6 岿</option>
+								<option value='7'>7 岿</option>
+								<option value='8'>8 岿</option>
+								<option value='9'>9 岿</option>
+								<option value='10'>10 岿</option>
+								<option value='11'>11 岿</option>
+								<option value='12'>12 岿</option>
+
+							</select> <select id="e_day" name="e_day" class="fe_select">
+								<option value='-1' selected>老</option>
+								<option value='1'>1 老</option>
+								<option value='2'>2 老</option>
+								<option value='3'>3 老</option>
+								<option value='4'>4 老</option>
+								<option value='5'>5 老</option>
+								<option value='6'>6 老</option>
+								<option value='7'>7 老</option>
+								<option value='8'>8 老</option>
+								<option value='9'>9 老</option>
+								<option value='10'>10 老</option>
+								<option value='11'>11 老</option>
+								<option value='12'>12 老</option>
+								<option value='13'>13 老</option>
+								<option value='14'>14 老</option>
+								<option value='15'>15 老</option>
+								<option value='16'>16 老</option>
+								<option value='17'>17 老</option>
+								<option value='18'>18 老</option>
+								<option value='19'>19 老</option>
+								<option value='20'>20 老</option>
+								<option value='21'>21 老</option>
+								<option value='22'>22 老</option>
+								<option value='23'>23 老</option>
+								<option value='24'>24 老</option>
+								<option value='25'>25 老</option>
+								<option value='26'>26 老</option>
+								<option value='27'>27 老</option>
 								<option value='28'>28 老</option>
 								<option value='29'>29 老</option>
 								<option value='30'>30 老</option>

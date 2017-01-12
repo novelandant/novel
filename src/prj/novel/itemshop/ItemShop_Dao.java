@@ -35,13 +35,13 @@ public class ItemShop_Dao {
 	
 	
 
-	public ArrayList getUtilList(String id , String before, String after){
+	public ArrayList getUtilList(String id , String to, String from){
 		ArrayList list = new ArrayList();
 		
 		
 		String sql = null;
 		
-		if (before==null||after==null) {			
+		if (to==null||from==null) {			
 			sql = "select * from pur_history where member_id = ?";
 		}else{			
 			sql = "SELECT * FROM pur_history where member_id = ? and pur_date between ? and ? ";	
@@ -49,14 +49,16 @@ public class ItemShop_Dao {
 		
 		try{
 			con = ds.getConnection();
+			
 			pstmt = con.prepareStatement(sql);
-			if (before==null||after==null) {
+			if (to==null && from==null) {
 				pstmt.setString(1, id);
 				rs = pstmt.executeQuery();				
 			}else{
 				pstmt.setString(1, id);
-				pstmt.setString(2, before);
-				pstmt.setString(3, after);
+				pstmt.setString(2, to);
+				pstmt.setString(3, from);
+				rs = pstmt.executeQuery();
 			}
 			
 			while(rs.next()){
