@@ -14,7 +14,7 @@ param 값이 property와 다를 때는 반드시 명시!!
 -->
 
 <%
-
+ 
 	
 	String pur_history = request.getParameter("pur_history");
 	String history[] = pur_history.split(",");

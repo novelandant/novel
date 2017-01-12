@@ -80,7 +80,7 @@ $( function(){
 								<option value='2014'>2014년</option>
 								<option value='2015'>2015년</option>
 								<option value='2016'>2016년</option>
-								<option value='2017'>2017년</option>
+								<option value='2017'>2017년</option> 
 
 							</select> <select id="s_month" name="s_month" class="fe_select">
 								<option value='-1' selected>월</option>

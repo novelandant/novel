@@ -81,7 +81,7 @@ public class ItemShop_Dao {
 		return list;
 	}
 	
-
+ 
 	public void insertPur_History(String history[], ItemShop_Dto dto){
 		// insert into 테이블명 (컬럼명 ...) values(값);
 		String sql = "insert into pur_history(member_id,pur_date,pur_way,sum,util_kind)"
