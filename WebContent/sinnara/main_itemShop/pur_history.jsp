@@ -15,7 +15,7 @@
 
 <script src="/Test/sinnara/assets/js/jquery-3.1.1.min.js"></script>
 <script src="/Test/sinnara/assets/js/bootstrap.min.js"></script>
-
+ 
 <script>
 $( function(){
 	$("#btn_search").click(
